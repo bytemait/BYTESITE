@@ -8,10 +8,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Achievements from "./pages/Achievements";
 import Projects from "./pages/Projects";
+import NavBar from "./components/navbar";
 
 function App() {
   return (
     <Router>
+      <NavBar />
       <Routes>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
