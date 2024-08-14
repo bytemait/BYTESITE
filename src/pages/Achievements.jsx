@@ -5,7 +5,7 @@ import timelineelements from './timelineelements';
 export default function Achievements() {
   return (
     <>
-    <div className='bg-[#000319]'>
+    <div className='bg-[#000319] pt-20'>
        <h1 className="bg-theme-2 text-theme-1">Achievements</h1>
        <VerticalTimeline>
             {
