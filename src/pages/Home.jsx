@@ -1,7 +1,8 @@
-export default function Home() {
+const Home = () => {
   return (
-    <>
-      <h1 className="bg-theme-1  text-theme-2 w-full">Home</h1>
-    </>
+    <div className="bg-black min-h-screen flex flex-col">
+    </div>
   );
-}
+};
+
+export default Home;
