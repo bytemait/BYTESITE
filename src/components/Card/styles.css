@@ -1,0 +1,5 @@
+.hollow-text {
+  color: transparent;
+  -webkit-text-stroke: 2px white; /* For WebKit-based browsers */
+ 
+}
