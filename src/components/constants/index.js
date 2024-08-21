@@ -15,13 +15,7 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  
   threejs,
 } from "../../assets";
 
@@ -204,71 +198,72 @@ const technologies = [
     icon: docker,
   },
 ];
-
-const projects = [
+const experiences = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+    title: "Build For Bharat 2024 - 1st Position",
+    winner_name: "Shivam , Ishaan , Aman",
+    
+    date: "March 2024",
+    points: [
+      "We proudly secured the 1st Position in the prestigious Build For Bharat 2024 hackathon,an all-India competition that brought together the brightest minds to tackle real-world challenges.",
+      "Competing against top talent from across the country, our innovative solution stood out, earning us the top spot and recognition on a national level."
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+    title: "Build for Future (DTU) - Winners",
+    winner_name: "XYZ , ABC",
+    date: "MAY 2024",
+    points: [
+      "We emerged as the Winners of the Build for Future hackathon at Delhi Technological University (DTU), where we demonstrated our cutting-edge solution in a highly competitive environment.",
+      "Our project was recognized for its innovation, practicality, and potential to drive future advancements, setting us apart as leaders in technological innovation."
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+    title: "Innovation Mela",
+    winner_name: "XYZ , ABC ",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "We proudly clinched the top spot at our own Innovation Mela hosted by Maharaja Agrasen Institute of Technology (MAIT).",
+      "Competing among peers, our project was recognized for its creativity, technical prowess, and potential to make a real-world impact, underscoring our commitment to excellence within our academic community."
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+  },
+  {
+    title: "UX Unleashed - 3rd Position",
+    winner_name: "XYZ , ABC",
+    date: "MAY 2024",
+    points: [
+      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
+      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+    ],
+  },
+  {
+    title: "VIHAAN 007 -1st Position",
+    winner_name: "Khushi , Anushka , Anisha",
+    date: "MAY 2024",
+    points: [
+      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
+      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+    ],
+  },
+  {
+    title: "HackMait-4.0 - 1st Positon",
+    winner_name: "Khushi , Anushka , Anisha",
+    date: "MAY 2023",
+    points: [
+      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
+      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+    ],
+  },
+  {
+    title: "CodeforCause - MSIT -1ST POSITION",
+    winner_name: "Khushi , Anushka , Anisha",
+    date: "MAY 2023",
+    points: [
+      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
+      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+    ],
   },
 ];
 
-export { services, teamMembers, technologies, projects };
+
+export { services, teamMembers, technologies,  experiences};

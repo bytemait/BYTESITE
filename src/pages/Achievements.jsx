@@ -1,36 +1,69 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import "react-vertical-timeline-component/style.min.css";
-import timelineelements from './timelineelements';
+import { motion } from "framer-motion";
+import { experiences } from '../components/constants';
+import {SectionWrapper} from '../components/hoc'
+import { textVariant } from '../components/utils/motion';
+import {styles} from '../components/style'
 
-export default function Achievements() {
+const ExperienceCard = ({ experience }) => {
   return (
-    <>
-      <div className='bg-[#000319] pt-20'>
-        <h1 className="bg-theme-2 text-theme-1">Achievements</h1>
-        <VerticalTimeline>
-          {
-            timelineelements.map(element => {
-              return (
-                <VerticalTimelineElement
-                  key={element.id}
-                  date={element.date}
-                  dateClassName="date"
-                  iconStyle={{ background: 'rgb(0, 128 , 55)', color: '#fff' }}
-                  className=" shadow-lg hover:scale-105 transition-all duration-500 ease-in-out rounded-lg p-4"
-                >
-                  <h3 className="text-lg font-bold pt-1">{element.title}</h3>
-                  <h4 className="">{element.location}</h4>
-                  <p>
-                    {element.description}
-                  </p>
-                </VerticalTimelineElement>
-              )
-            })
-          }
-        </VerticalTimeline>
+    <VerticalTimelineElement
+      contentStyle={{
+        background: "#1d1836",
+        color: "#fff",
+      }}
+      contentArrowStyle={{ borderRight: "7px solid  #4afaab" }}
+      date={experience.date}
+      iconStyle={{ background: '#4afaab' }}
+    >
+      <div>
+        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
+        <p
+          className='text-secondary text-[16px] font-semibold'
+          style={{ margin: 0 }}
+        >
+          {experience.winner_name}
+        </p>
       </div>
 
+      <ul className='mt-5 list-disc ml-5 space-y-2'>
+        {experience.points.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+            className='text-white-100 text-[14px] pl-1 tracking-wider'
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+    </VerticalTimelineElement>
+  );
+};
 
+function Achievements() {
+  return (
+    <>
+      <motion.div variants={textVariant()}>
+      <p className={`${styles.sectionSubText} text-center`}>
+          What we have achieved so far
+        </p>
+        <h2 className = "text-center text-[#4afaab] text-5xl">
+          BYTE ACHIEVEMENTS
+        </h2>
+      </motion.div>
+      <div className='mt-20 flex flex-col '>
+        <VerticalTimeline>
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={`experience-${index}`}
+              experience={experience}
+            />
+          ))}
+        </VerticalTimeline>
+      </div>
     </>
   );
 }
+
+export default SectionWrapper(Achievements, "work");
