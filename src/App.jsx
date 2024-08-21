@@ -5,7 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import About from "./pages/Aboutus";
 import Achievements from "./pages/Achievements";
 import Projects from "./pages/Projects";
 import NavBar from "./components/navbar";
