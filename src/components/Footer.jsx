@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-gray-300 py-8 px-8 m-20">
-            <div className="container mx-auto flex justify-between items-center">
+        <div className=" text-gray-300 bg-black">
+            <div className="container px-10 py-10 mx-auto flex justify-between items-center">
                 <div>
                     <h1 className="text-4xl font-bold">
                         Solving Problems<br />
@@ -13,9 +13,9 @@ const Footer = () => {
                 <div>
                     <h2 className="text-3xl font-semibold mb-2">Explore</h2>
                     <ul className='text-xl'>
-                        <li><a href="#" className="hover:text-green-400">Home</a></li>
-                        <li><a href="#" className="hover:text-green-400">Achievements</a></li>
-                        <li><a href="#" className="hover:text-green-400">Projects</a></li>
+                        <li><a href="/home" className="hover:text-green-400">Home</a></li>
+                        <li><a href="/achievements" className="hover:text-green-400">Achievements</a></li>
+                        <li><a href="/projects" className="hover:text-green-400">Projects</a></li>
                         <li><a href="#" className="hover:text-green-400">Challenges</a></li>
                     </ul>
                 </div>
@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container mx-auto mt-8 border-t border-gray-700 pt-4 flex justify-between items-center">
-                <p>© 2021 All Rights Reserved</p>
+                <p className='text-center'>© 2024 All Rights Reserved</p>
                 <div className="flex space-x-4">
                     <a href="#" className="hover:text-green-400"><i className="fab fa-linkedin"></i></a>
                     <a href="#" className="hover:text-green-400"><i className="fab fa-instagram"></i></a>
@@ -38,7 +38,7 @@ const Footer = () => {
                     <a href="#" className="hover:text-green-400"><i className="fab fa-twitter"></i></a>
                 </div>
             </div>
-        </footer>
+        </div>
     );
 };
 
