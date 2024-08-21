@@ -14,7 +14,6 @@ let timelineElements = [
       location: "Delhi , India",
       description:
         "Congratulations to Ishaan and Aman for winning the prestigious Smart India Hackathon 2023! Their innovative solution stood out among 15,000 teams, earning them the top spot.",
-      buttonText: "View Backend Projects",
       date: "August 2023 ",
       icon: "byte",
     },
@@ -24,7 +23,6 @@ let timelineElements = [
       location: "Delhi , India",
       description:
         "Congratulations to Ishaan and Aman for winning the prestigious Smart India Hackathon 2023! Their innovative solution stood out among 15,000 teams, earning them the top spot.",
-      buttonText: "Company Website",
       date: "August 2023",
       icon: "byte",
     },
@@ -34,7 +32,6 @@ let timelineElements = [
         location: "Delhi , India",
         description:
           "Congratulations to Ishaan and Aman for winning the prestigious Smart India Hackathon 2023! Their innovative solution stood out among 15,000 teams, earning them the top spot.",
-        buttonText: "Company Website",
         date: "August 2023",
         icon: "byte",
       },
@@ -44,7 +41,6 @@ let timelineElements = [
         location: "Delhi , India",
         description:
           "Congratulations to Ishaan and Aman for winning the prestigious Smart India Hackathon 2023! Their innovative solution stood out among 15,000 teams, earning them the top spot.",
-        buttonText: "Company Website",
         date: "August 2023",
         icon: "byte",
       },
@@ -54,7 +50,6 @@ let timelineElements = [
         location: "Delhi , India",
         description:
           "Congratulations to Ishaan and Aman for winning the prestigious Smart India Hackathon 2023! Their innovative solution stood out among 15,000 teams, earning them the top spot.",
-        buttonText: "Company Website",
         date: "August 2023",
         icon: "byte",
       },

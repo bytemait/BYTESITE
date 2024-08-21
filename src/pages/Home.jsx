@@ -20,7 +20,6 @@ const Home = () => {
       <CardCarousel />
       <HeroMid />
       <CardContainer />
-      <Footer />
     </div>
   );
 };
