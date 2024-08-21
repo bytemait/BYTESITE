@@ -9,10 +9,9 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col">
-      <h1 className="text-theme-1">Welcome to My Page</h1>
-      <div className=''>
+      <div className='flex justify-around'>
         <Hero/>
-        <div style={{position:'absolute' , width: '00px', height: '00px', right:'0px', top:'100px' }}>
+        <div style={{position: "relative", width: '600px', height: '600px', right:'0px', top:'0px' }}>
           <Spline
             scene="https://prod.spline.design/qtMJZp9qovCHAQCX/scene.splinecode" 
           />
