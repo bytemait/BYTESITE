@@ -2,7 +2,7 @@ import React from "react";
 
 const Rectangle = ({
   width = 150,
-  height = 315,
+  height = 325,
   color = "gray",
   borderRadius = 10,
   image,
