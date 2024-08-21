@@ -2,7 +2,7 @@ import React from "react";
 import SmallCircle from "./SmallCircle";
 
 const SmallCircleContainer = ({
-  size = 70,
+  size = 140,
   color = "gray",
   image1,
   image2,

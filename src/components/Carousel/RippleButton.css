@@ -1,23 +1,23 @@
 .circle-container {
   position: relative;
-  width: 200px; 
-  height: 200px; 
+  width: 300px; 
+  height: 300px; 
   overflow: hidden; 
   border-radius: 50%;
+  transition: transform 0.2s ease; /* Faster transition */
 }
 
 .large {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   background-color: ; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0; 
   border-radius: 50%;
-  border: 50px solid white;
-
+  border: 11px solid white;
 }
 
 .medium {
@@ -30,20 +30,20 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   border-radius: 50%;
-  transition: width 0.6s ease, height 0.6s ease; 
+  transition: width 0.3s ease, height 0.3s ease; /* Faster transition */
 }
 
 .image-circle {
   position: absolute;
-  width: 100px; 
-  height: 100px; 
+  width: 140px; 
+  height: 140px; 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.98);
   z-index: 2;
   border-radius: 50%;
   overflow: hidden; 
-  transition: transform 0.3s ease; 
+  transition: transform 0.2s ease; /* Faster transition */
 }
 
 .image-circle img {
@@ -55,33 +55,34 @@
 .text {
   position: absolute;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, 0); 
   color: white; 
   font-family: 'Samsung Sharp Sans', sans-serif; 
-  font-weight: 700; 
+  font-weight: 800; 
   letter-spacing: 1px; 
   z-index: 3; 
   opacity: 0; 
-  transition: opacity 0.3s ease, transform 0.6s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Faster transition */
   text-align: center; 
 }
 
 .text.above {
   top: -20%; 
-  font-size: 12px; 
+  font-size: 18px; 
   transform: translate(-50%, -30px); 
 }
 
 .text.below {
   bottom: -20%; 
-  font-size: 16px; 
+  font-size: 19px; 
   transform: translate(-50%, 30px); 
 }
 
 /* Hover effect */
 .circle-container:hover .medium {
-  width: 200px; 
-  height: 200px; 
+  width: 280px; 
+  height: 280px; 
 }
 
 .circle-container:hover .text {

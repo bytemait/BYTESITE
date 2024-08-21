@@ -1,8 +1,8 @@
 import React from "react";
 
 const Rectangle = ({
-  width = 77,
-  height = 190,
+  width = 150,
+  height = 315,
   color = "gray",
   borderRadius = 10,
   image,

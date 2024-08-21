@@ -1,4 +1,3 @@
-
 .carousel-wrapper {
   overflow: hidden;
   width: 100vw; /* Full viewport width */
@@ -9,7 +8,13 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  animation: scroll 20s linear infinite; /* Adjust the duration for speed */
+  animation: scroll 12s linear infinite; /* Adjusted duration for faster speed */
+  transition: transform 5.1s ease-in-out; /* Smooth scrolling transition */
+}
+
+.carousel-wrapper:hover .carousel-container,
+.carousel-container:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
 }
 
 .carousel-container > * {
@@ -48,8 +53,5 @@
   }
   100% {
     transform: translateX(-100%);
-  }
-  0% {
-    transform: (0);
   }
 }

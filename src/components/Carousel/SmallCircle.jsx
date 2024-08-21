@@ -1,6 +1,6 @@
 import React from "react";
 
-const SmallCircle = ({ size = 70, color = "gray", image }) => {
+const SmallCircle = ({ size = 160, color = "gray", image }) => {
   const circleStyle = {
     width: `${size}px`,
     height: `${size}px`,
