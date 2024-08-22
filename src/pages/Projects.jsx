@@ -21,7 +21,8 @@ export default function Projects() {
           PROJECTS
         </p>
       </div>
-      <div className="App">
+      <div className="App mt-20">
+        {" "}
         <Carousel />
       </div>
     </div>

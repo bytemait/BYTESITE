@@ -2,7 +2,7 @@ import React from "react";
 import "./RippleButton.css";
 
 const RippleButton = ({
-  size = 200,
+  size = 280,
   image,
   textAbove = "Pop.In",
   textBelow = "Project",
