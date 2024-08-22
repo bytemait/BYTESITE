@@ -56,88 +56,89 @@ const services = [
 const teamMembers = {
   "Web Dev Team": [
     {
-      name: "John Doe",
-      role: "Front-end Developer",
+      name: "Ishaan Minocha",
+      role: "Full Stack Developer",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Jane Smith",
+      name: "Adisht Jaglan",
       role: "Back-end Developer",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Alex Johnson",
+      name: "Aman ",
       role: "Full-stack Developer",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Emily Davis",
+      name: "Abir Thakur",
       role: "UI/UX Designer",
       image: "https://via.placeholder.com/150",
     },
   ],
   "AI/ML Team": [
     {
-      name: "Michael Brown",
-      role: "Mobile Developer (iOS)",
+      name: "Shivam Gupta",
+      role: "Machine Learning",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Olivia Wilson",
-      role: "Mobile Developer (Android)",
+      name: "Nalin Khanna",
+      role: "Machine Learning)",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "David Lee",
-      role: "QA Engineer",
+      name: "Ujjwal ",
+      role: "ML Engineer",
       image: "https://via.placeholder.com/150",
-    },
+    },  
     {
-      name: "Sarah Chen",
-      role: "Product Manager",
+      name: "Chayan Mann ",
+      role: "ML Engineer",
       image: "https://via.placeholder.com/150",
-    },
+    },  
   ],
   "IOT Team": [
     {
-      name: "William Nguyen",
-      role: "Hardware Engineer",
+      name: "Tanush Parwar",
+      role: "IOT",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Sophia Patel",
-      role: "Firmware Developer",
+      name: "Shivam Kumar Jha",
+      role: "IOT",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Daniel Ramirez",
-      role: "Systems Integrator",
+      name: "Ashish Negi",
+      role: "IOT",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Isabella Gutierrez",
+      name: "Subhashish Panda",
       role: "IoT Analyst",
       image: "https://via.placeholder.com/150",
     },
   ],
   "Design Team": [
     {
-      name: "Ethan Gonzalez",
+      name: "Khushi Minda",
       role: "UI Designer",
       image: "https://via.placeholder.com/150",
     },
+    
     {
-      name: "Avery Perez",
+      name: "Anisha Dua",
       role: "UX Researcher",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Lucas Flores",
+      name: "Ansh Kapila",
       role: "Graphic Designer",
       image: "https://via.placeholder.com/150",
     },
     {
-      name: "Mia Diaz",
+      name: "Swasti",
       role: "Motion Designer",
       image: "https://via.placeholder.com/150",
     },
