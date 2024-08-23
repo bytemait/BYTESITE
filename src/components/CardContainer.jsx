@@ -33,8 +33,8 @@ const CardContainer = () => {
             </div>
           </div>
 
-          <div className="flex-1 bg-gray-800 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 max-w-md">
-            <div className="p-6 flex flex-col justify-between">
+          <div className="flex justify-between flex-col-reverse bg-gray-800 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 max-w-md">
+            <div className="p-6 flex flex-row justify-between mb-8">
               <div>
                 <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">
                   MR Glass
@@ -48,18 +48,18 @@ const CardContainer = () => {
                 <span className="text-sm">#02</span>
               </div>
             </div>
-            <div className="relative">
+            <div className="">
               <img
                 src="https://img.freepik.com/free-photo/smart-glasses-with-interactive-lenses-seeing-future_53876-101153.jpg?t=st=1724369379~exp=1724372979~hmac=9acaedbb7ae9d5d92593752d40d466ce5f8de80526bcd198f9f26184e77bdfb7&w=1800"
                 alt="MR Glass"
-                className="w-full h-full object-cover rounded-b-lg"
+                className="w-full h-full object-fill rounded-b-lg"
               />
             </div>
           </div>
         </div>
 
         <div className="flex justify-center">
-          <div className="bg-gray-800 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 max-w-4xl">
+          <div className="bg-gray-800 flex h-80 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 w-[66%]">
             <div className="p-6 flex flex-col justify-between">
               <div>
                 <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">
