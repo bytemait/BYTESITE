@@ -8,7 +8,7 @@ const CardContainer = () => {
       </h1>
 
       <div className="flex flex-col gap-16 md:gap-24">
-        <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-16">
+        <div className="flex flex-col md:flex-row md:justify-center gap-10 md:gap-20">
           <div className="flex-1 bg-gray-800 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 max-w-md">
             <div className="p-6 flex flex-col justify-between">
               <div>

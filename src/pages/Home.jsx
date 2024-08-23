@@ -8,14 +8,20 @@ import Hero from '../components/Home-Hero-Section/Hero';
 const Home = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col">
-      <div className='flex justify-around'>
-        <Hero />
-        <div style={{ position: 'relative', width: '600px', height: '600px', right: '0px', top: '0px' }}>
-          <Spline scene="https://prod.spline.design/qtMJZp9qovCHAQCX/scene.splinecode" />
+      <div className='flex justify-between mt-16'>
+        <div className='md:ml-64 xs:ml-4'>
+          <Hero />
+        </div>
+        <div className='mt-36'>
+          <Spline
+          scene="https://prod.spline.design/70rWXJWtYcdln4iF/scene.splinecode" 
+          width={512}
+          height={512}
+        />
         </div>
       </div>
-      <CardCarousel />
-      <HeroMid />
+      {/* <CardCarousel />
+      <HeroMid /> */}
       <CardContainer />
     </div>
   );

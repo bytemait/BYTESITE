@@ -43,7 +43,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-component p-6 mb-32 text-white tracking-widest">
+    <div className="hero-component p-6 mb-20 text-white tracking-widest">
       <div className="leading-tight text-8xl font-bold">
         <div>
           <span className="byte-letter text-[#4afaab]">B</span><span className="full-form">rains</span>
