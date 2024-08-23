@@ -5,12 +5,7 @@ Welcome to the official repository for the BYTE site! BYTE is an official Tech S
 ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
