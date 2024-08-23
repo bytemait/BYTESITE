@@ -12,24 +12,25 @@ function NavBar() {
   return (
     <div className="w-full h-16 bg-black bg-opacity-70 flex items-center p-2 fixed top-0 z-50">
       <div className="w-full flex items-center justify-between md:justify-center">
+
         {/* Mobile View: Hamburger Button and Logo */}
         <div className="flex items-center justify-between w-full md:hidden">
           <button
             onClick={handleToggle}
-            className="text-white text-2xl focus:outline-none ml-4"
+            className="text-white text-2xl focus:outline-none mr-auto"
           >
             {isOpen ? <HiX /> : <HiMenu />}
           </button>
-          <div className="text-white text-xl font-bold mx-auto">
+          {/* <div className="text-white text-xl font-bold mx-auto">
             BYTE
-          </div>
+          </div> */}
         </div>
 
         {/* Desktop View: Logo and Navigation Links */}
         <div className="hidden md:flex items-center space-x-8">
-          <div className="text-white text-xl font-bold">
+          {/* <div className="text-white text-xl font-bold">
             BYTE
-          </div>
+          </div> */}
           <NavLink
             to="/home"
             className={({ isActive }) =>
