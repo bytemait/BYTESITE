@@ -1,6 +1,6 @@
 .carousel-wrapper {
   overflow: hidden;
-  width: 100vw; /* Full viewport width */
+  width: 100vw; 
   background-color: inherit;
 }
 
@@ -8,17 +8,17 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  animation: scroll 12s linear infinite; /* Adjusted duration for faster speed */
-  transition: transform 5.1s ease-in-out; /* Smooth scrolling transition */
+  animation: scroll 12s linear infinite;
+  transition: transform 5.1s ease-in-out; 
 }
 
 .carousel-wrapper:hover .carousel-container,
 .carousel-container:hover {
-  animation-play-state: paused; /* Pause the animation on hover */
+  animation-play-state: paused;
 }
 
 .carousel-container > * {
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0; 
 }
 
 .circle {
@@ -41,8 +41,8 @@
 }
 
 .rectangle {
-  width: 77px; /* Set width of both rectangles */
-  height: 190px; /* Set height of both rectangles */
+  width: 77px; 
+  height: 190px; 
   background-color: gray;
   border-radius: 10px;
 }

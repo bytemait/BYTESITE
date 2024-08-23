@@ -1,5 +1,66 @@
 .hollow-text {
   color: transparent;
-  -webkit-text-stroke: 2px white; /* For WebKit-based browsers */
+  -webkit-text-stroke: 2px white;
   
 }
+
+.hero-component {
+  padding: 2rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  background-color: #000; 
+}
+
+.hero-component .byte-letter {
+  display: inline-block;
+  font-size: 2rem; 
+}
+
+.hero-component .full-form {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.hero-component .mt-4 {
+  font-size: 1.25rem; 
+}
+
+
+@media (min-width: 768px) {
+  .hero-component {
+    padding: 3rem;
+    margin-bottom: 12rem;
+  }
+
+  .hero-component .byte-letter {
+    font-size: 3rem; 
+  }
+
+  .hero-component .full-form {
+    font-size: 3rem; 
+  }
+
+  .hero-component .mt-4 {
+    font-size: 1.75rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-component {
+    padding: 4rem;
+    margin-bottom: 16rem;
+  }
+
+  .hero-component .byte-letter {
+    font-size: 4rem;
+  }
+
+  .hero-component .full-form {
+    font-size: 4rem;
+  }
+
+  .hero-component .mt-4 {
+    font-size: 2rem; 
+  }
+}
+

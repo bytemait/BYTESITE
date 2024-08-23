@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
+import './styles.css'; // Import CSS file for styles
 
 const Hero = () => {
   useEffect(() => {
@@ -27,8 +28,8 @@ const Hero = () => {
           opacity: 0,
           x: 50,
           ease: "power2.out",
-          delay:2,
-          duration:1
+          delay: 2,
+          duration: 1
         },
         {
           opacity: 1,
