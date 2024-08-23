@@ -9,7 +9,7 @@ Welcome to the official repository for the BYTE site! BYTE is an official Tech S
 
 ## Overview
 
-BYTE is a dynamic platform that highlights our commitment to advancing technology through creative solutions and impactful projects. From AR shopping experiences to AI-driven customer service enhancements, BYTE demonstrates how technology can transform industries and improve lives.
+BYTE is a dynamic platform that highlights our commitment to advancing technology through creative solutions and impactful projects. From MR Glasses to AI-driven College Security System to Robo Soccer, BYTE demonstrates how technology can transform industries and improve lives.
 
 
 ## Installation
