@@ -34,10 +34,10 @@ To set up the BYTE site locally, follow these steps:
    npm install
    ```
 
-4. **Run the Development Server**:
+4. **Run the Vite Development Server**:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
-   Open `http://localhost:3000` in your browser to view the site.
+   Open `http://localhost:5173` in your browser to view the site.
