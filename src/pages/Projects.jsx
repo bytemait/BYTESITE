@@ -48,8 +48,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="h-screen bg-gradient-to-b from-[#000000] to-[#032703]">
-      <div className="flex flex-col justify-center items-center pt-32 text-center md:text-left">
+    <div className="min-h-screen bg-gradient-to-b from-[#000000] to-[#032703]">
+      <div className="flex flex-col justify-center items-center pt-20 text-center md:text-left">
         <div className="flex flex-col md:flex-row items-center md:items-end gap-6 md:gap-6 md:mr-48">
           <span className="text-7xl md:text-9xl font-extrabold tracking-widest bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
             BYTE

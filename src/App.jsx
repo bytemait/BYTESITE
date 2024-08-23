@@ -7,7 +7,7 @@ import {
 import Home from "./pages/Home";
 import Achievements from "./pages/Achievements";
 import Projects from "./pages/Projects";
-import NavBar from "./components/navbar";
+import NavBar from "./components/NavBar";
 import Aboutus from "./pages/Aboutus";
 import Footer from "./components/Footer";
 
