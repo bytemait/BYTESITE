@@ -1,4 +1,4 @@
-# BYTE - Solving Problems One BYTE at a Time
+# BYTE - Solving Problems One BYTE at a Time 
 
 Welcome to the official repository for the BYTE site! BYTE is an official Tech Society of MAIT, Delhi focused on integrating cutting-edge solutions to tackle real-world challenges. This site showcases our latest projects, achievements, and technological advancements.
 
