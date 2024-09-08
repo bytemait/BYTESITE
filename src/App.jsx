@@ -24,7 +24,7 @@ function App() {
             <Route path="/tasks/:domain" element={<MultipurposeTasksPage/>}/>
             <Route path="/achievements" element={<Achievements />}/>
             <Route path="/projects" element={<Projects />}/>
-            <Route path="*" element={<Navigate to="/home" />}/>
+            <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
       <Footer/>
     </Router>

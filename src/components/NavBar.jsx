@@ -32,7 +32,7 @@ function NavBar() {
             BYTE
           </div> */}
           <NavLink
-            to="/home"
+            to="/"
             className={({ isActive }) =>
               `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
                hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
@@ -88,7 +88,7 @@ function NavBar() {
           }`}
       >
         <NavLink
-          to="/home"
+          to="/"
           className="text-white text-lg py-2"
           onClick={handleToggle}
         >

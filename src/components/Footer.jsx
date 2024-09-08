@@ -15,7 +15,7 @@ const Footer = () => {
                         <div className="footer-links mb-6 md:mb-0">
                             <h2 className="text-3xl font-semibold mb-2">Explore</h2>
                             <ul className='text-xl'>
-                                <li><a href="/home" className="hover:text-green-400">Home</a></li>
+                                <li><a href="/" className="hover:text-green-400">Home</a></li>
                                 <li><a href="/achievements" className="hover:text-green-400">Achievements</a></li>
                                 <li><a href="/projects" className="hover:text-green-400">Projects</a></li>
                                 <li><a href="#" className="hover:text-green-400">Challenges</a></li>
