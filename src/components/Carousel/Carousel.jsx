@@ -1,460 +1,97 @@
 import React from "react";
 import RippleButton from "./RippleButton";
-import Rectangle from "./Rectangle";
-import SmallCircleContainer from "./SmallCircleContainer";
 import "./Carousel.css";
 
 import image1 from "./image1.png";
 import image2 from "./image2.png";
 import image3 from "./image3.png";
-import rectImage1 from "./rectImage1.png";
-import rectImage2 from "./rectImage2.png";
-import circleImage1 from "./circleImage1.png";
-import circleImage2 from "./circleImage2.png";
 
 const Carousel = () => {
   return (
     <div className="carousel-wrapper">
       <div className="carousel-container">
-        <Rectangle image={rectImage1} />
         <RippleButton
           image={image1}
           size={280}
-          textAbove="RoboSoccer"
+          textAbove="Object Avoidance Bot"
           textBelow="Go To Project"
         />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
         <RippleButton
           image={image2}
           size={280}
           textAbove="ByteLocker"
           textBelow="Go To Project"
         />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
         <RippleButton
-          image={image3}
+          image='/projects/bylexa.png'
           size={280}
-          textAbove="LFR"
+          textAbove="Bylexa"
           textBelow="Go To Project"
         />
-        <Rectangle image={rectImage1} />
+        <RippleButton
+          image='/projects/eduverse.png'
+          size={280}
+          textAbove="Eduverse"
+          textBelow="Go To Project"
+        />
+        <RippleButton
+          image='/projects/metablocks.png'
+          size={280}
+          textAbove="Metablocks"
+          textBelow="Go To Project"
+        />
+        <RippleButton
+          image='/projects/progmatic.png'
+          size={280}
+          textAbove="Progmatic"
+          textBelow="Go To Project"
+        />
+        <RippleButton
+          image='/projects/erp.jpg'
+          size={280}
+          textAbove="ERP"
+          textBelow="Go To Project"
+        />
         <RippleButton
           image={image1}
           size={280}
-          textAbove="RoboSoccer"
+          textAbove="Object Avoidance Bot"
           textBelow="Go To Project"
         />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
         <RippleButton
           image={image2}
           size={280}
           textAbove="ByteLocker"
           textBelow="Go To Project"
         />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
         <RippleButton
-          image={image3}
+          image='/projects/bylexa.png'
           size={280}
-          textAbove="LFR"
+          textAbove="Bylexa"
           textBelow="Go To Project"
         />
-        <Rectangle image={rectImage1} />
         <RippleButton
-          image={image1}
+          image='/projects/eduverse.png'
           size={280}
-          textAbove="RoboSoccer"
+          textAbove="Eduverse"
           textBelow="Go To Project"
         />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
         <RippleButton
-          image={image2}
+          image='/projects/metablocks.png'
           size={280}
-          textAbove="ByteLocker"
+          textAbove="Metablocks"
           textBelow="Go To Project"
         />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
         <RippleButton
-          image={image3}
+          image='/projects/progmatic.png'
           size={280}
-          textAbove="LFR"
+          textAbove="Progmatic"
           textBelow="Go To Project"
         />
-        <Rectangle image={rectImage1} />
         <RippleButton
-          image={image1}
+          image='/projects/erp.jpg'
           size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
-          textBelow="Go To Project"
-        />
-        <Rectangle image={rectImage1} />
-        <RippleButton
-          image={image1}
-          size={280}
-          textAbove="RoboSoccer"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image2}
-          size={280}
-          textAbove="ByteLocker"
-          textBelow="Go To Project"
-        />
-        <SmallCircleContainer image1={circleImage1} image2={circleImage2} />
-        <RippleButton
-          image={image3}
-          size={280}
-          textAbove="LFR"
+          textAbove="ERP"
           textBelow="Go To Project"
         />
       </div>

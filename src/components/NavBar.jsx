@@ -17,7 +17,7 @@ function NavBar() {
         <div className="flex items-center justify-between w-full md:hidden">
           <button
             onClick={handleToggle}
-            className="text-white text-2xl focus:outline-none mr-auto"
+            className="text-white text-2xl focus:outline-none mr-auto z-40"
           >
             {isOpen ? <HiX /> : <HiMenu />}
           </button>
@@ -67,14 +67,25 @@ function NavBar() {
           >
             About Us
           </NavLink>
+          {/* New NavLink for Tasks with Green Moving Border */}
+          <NavLink
+            to="/tasks"
+            className={({ isActive }) =>
+              `relative text-white text-lg font-medium px-4 py-2 rounded-md ${isActive ? "border-b-2 border-green-500" : ""
+              } group glow-effect`
+            }
+          >
+            Tasks
+            {/* Moving Green Border on Hover */}
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </NavLink>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${isOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <NavLink
           to="/home"
@@ -103,6 +114,14 @@ function NavBar() {
           onClick={handleToggle}
         >
           About Us
+        </NavLink>
+        {/* New NavLink for Tasks in Mobile Menu */}
+        <NavLink
+          to="/tasks"
+          className="text-white text-lg py-2"
+          onClick={handleToggle}
+        >
+          Tasks
         </NavLink>
       </div>
     </div>

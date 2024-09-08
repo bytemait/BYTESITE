@@ -4,7 +4,7 @@
 # B.Y.T.E. Society Web & App Development Task Overview
 
 ## Introduction
-This repository outlines the tasks for the B.Y.T.E. Society involving web development, app development, and backend development. The goal is to challenge participants to create functional, well-structured applications with a focus on usability, user experience, and consistency. Below are the detailed tasks along with expectations and deliverables for each.
+This repository outlines the tasks for the B.Y.T.E. Society involving web development, app development and backend development. The goal is to challenge participants to create functional, well-structured applications with a focus on usability, user experience and consistency. Below are the detailed tasks along with expectations and deliverables for each.
 
 ---
 
@@ -102,9 +102,9 @@ Expand the location-tracking system to a fully deployed mobile app that can be d
 
 ## Key takeaways
 
-These tasks aim to challenge your development skills across various aspects of web, app, and backend development. Make sure to deliver a consistent and bug-free experience, ensuring that all features work seamlessly and scale well. The tasks should follow best practices in terms of security, performance and user experience.
+These tasks aim to challenge your development skills across various aspects of web, app and backend development. Make sure to deliver a consistent and bug-free experience, ensuring that all features work seamlessly and scale well. The tasks should follow best practices in terms of security, performance and user experience.
 
-Good luck, and we look forward to seeing your implementations!
+Good luck and we look forward to seeing your implementations!
 Please note that implementation and effort will be seen and what you implemented knowing your tech stack and what you tried to learn, try making and pushing something in submission even if it is incomplete
 ---
 

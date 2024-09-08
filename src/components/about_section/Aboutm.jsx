@@ -85,7 +85,7 @@ const Aboutm = () => {
       title: "What We Do?",
       subtitle: "Innovation at BYTE",
       description:
-        "At BYTE, we innovate, create, and collaborate. From developing cutting-edge projects in IoT, web, app, and machine learning to hosting workshops, hackathons, and forging industry connections, we're a community dedicated to exploring the limitless possibilities of technology and turning ideas into reality.",
+        "At BYTE, we innovate, create, and collaborate. From developing cutting-edge projects in IoT, web, app and machine learning to hosting workshops, hackathons, and forging industry connections, we're a community dedicated to exploring the limitless possibilities of technology and turning ideas into reality.",
     },
   ];
 

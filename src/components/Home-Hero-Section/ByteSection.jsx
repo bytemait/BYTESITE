@@ -7,7 +7,7 @@ function ByteSection() {
         We are <span className="text-green-400">BYTE</span>
       </h1>
       <p className="text-lg leading-relaxed text-white">
-        Welcome to BYTE, where innovation meets reality. We are a dynamic group of students driven by a passion for technology and a commitment to bringing ideas to life. From the realms of IoT, web development, app development, and machine learning to the intricacies of cybersecurity, our society thrives on exploration and creation.
+        Welcome to BYTE, where innovation meets reality. We are a dynamic group of students driven by a passion for technology and a commitment to bringing ideas to life. From the realms of IoT, web development, app development and machine learning to the intricacies of cybersecurity, our society thrives on exploration and creation.
       </p>
     </section>
   );

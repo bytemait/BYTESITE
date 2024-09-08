@@ -10,6 +10,8 @@ import Projects from "./pages/Projects";
 import NavBar from "./components/NavBar";
 import Aboutus from "./pages/Aboutus";
 import Footer from "./components/Footer";
+import MultipurposeTasksPage from "./components/tasks/ui/MultipurposeTasksPage";
+import TasksPage from "./components/tasks/ui/TasksPage";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Routes>
             <Route path="/home" element={<Home />}></Route>
             <Route path="/about" element={<Aboutus />}></Route>
+            <Route path="/tasks" element={<TasksPage />}></Route>
+            <Route path="/tasks/:domain" element={<MultipurposeTasksPage/>}></Route>
             <Route path="/achievements" element={<Achievements />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
             <Route path="*" element={<Navigate to="/home" />}></Route>

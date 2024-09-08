@@ -19,9 +19,9 @@ const RippleButton = ({
       <div className="image-circle">
         <img src={image} alt="Inner Circle" />
       </div>
-      <div className="text above">{textAbove}</div>{" "}
+      <div className="text above w-[150px]">{textAbove}</div>{" "}
       {/* Dynamic text above the image */}
-      <div className="text below">{textBelow}</div>{" "}
+      <a target= "_blank"href="https://github.com/bytemait"><div className="text below">{textBelow}</div>{" "}</a>
       {/* Dynamic text below the image */}
     </div>
   );

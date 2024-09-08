@@ -211,30 +211,45 @@ const experiences = [
     ],
   },
   {
+    title: "SIH 2023 - Winners",
+    winner_name: "Aman, Ishaan, Khushi",
+    
+    date: "March 2024",
+    points: [
+      "We proudly secured the 1st Position in the prestigious Smart India Hackathon under PS: 1438 at SVCET, Chitooor",
+      "Competing against top talent from across the country, our innovative solution stood out, earning us the top spot and recognition on a national level."
+    ],
+  },
+  {
+    title: "HackXtreme (IIT Delhi) - 1st Position",
+    winner_name: "Chanmeet , Ishaan , Aman",
+    
+    date: "September 2023",
+    points: [
+    ],
+  },
+  {
     title: "Build for Future (DTU) - Winners",
-    winner_name: "XYZ , ABC",
+    winner_name: "Ishaan , Chanmeet, Abir, Subhashish",
     date: "MAY 2024",
     points: [
       "We emerged as the Winners of the Build for Future hackathon at Delhi Technological University (DTU), where we demonstrated our cutting-edge solution in a highly competitive environment.",
-      "Our project was recognized for its innovation, practicality, and potential to drive future advancements, setting us apart as leaders in technological innovation."
     ],
   },
   {
     title: "Innovation Mela",
-    winner_name: "XYZ , ABC ",
+    winner_name: "BYTE",
     date: "Jan 2022 - Jan 2023",
     points: [
       "We proudly clinched the top spot at our own Innovation Mela hosted by Maharaja Agrasen Institute of Technology (MAIT).",
-      "Competing among peers, our project was recognized for its creativity, technical prowess, and potential to make a real-world impact, underscoring our commitment to excellence within our academic community."
     ],
   },
   {
     title: "UX Unleashed - 3rd Position",
-    winner_name: "XYZ , ABC",
+    winner_name: "",
     date: "MAY 2024",
     points: [
       "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
-      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
     ],
   },
   {
@@ -242,26 +257,23 @@ const experiences = [
     winner_name: "Khushi , Anushka , Anisha",
     date: "MAY 2024",
     points: [
-      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
-      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+      ,
     ],
   },
   {
     title: "HackMait-4.0 - 1st Positon",
-    winner_name: "Khushi , Anushka , Anisha",
+    winner_name: "Abir, Subhashish",
     date: "MAY 2023",
     points: [
-      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
-      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+      ,
     ],
   },
   {
     title: "CodeforCause - MSIT -1ST POSITION",
-    winner_name: "Khushi , Anushka , Anisha",
+    winner_name: "Subhashish, Abir",
     date: "MAY 2023",
     points: [
-      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
-      "Our design and user experience skills were recognized among a strong field of participants, showcasing our ability to create intuitive and impactful user interfaces in a dynamic environment."
+      ,
     ],
   },
 ];
