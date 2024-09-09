@@ -9,6 +9,7 @@ import IotTasks from '../data/IotTasks';
 import ComingSoon from '../ComingSoon';
 import { FaTasks } from 'react-icons/fa';
 import KeyTakeaways from '../data/KeyTakeaways';
+import CADTasks from '../data/CADTask';
 
 // Custom Sidebar Component
 const CustomSidebar = ({ isOpen, toggleSidebar }) => (
@@ -20,6 +21,7 @@ const CustomSidebar = ({ isOpen, toggleSidebar }) => (
             <li><Link to="/tasks/iot" className="text-white hover:text-green-400">Iot(Internet Of Things)</Link></li>
             <li><Link to="/tasks/ml" className="text-white hover:text-green-400">Machine Learning</Link></li>
             <li><Link to="/tasks/cybersec" className="text-white hover:text-green-400">Cyber Security</Link></li>
+            <li><Link to="/tasks/cad" className="text-white hover:text-green-400">CAD</Link></li>
         </ul>
     </div>
 );
@@ -74,6 +76,7 @@ const MultipurposeTasksPage = () => {
                         {domain === 'iot' && <ComingSoon />}
                         {domain === 'ml' && <MlTasks />}
                         {domain === 'cybersec' && <CybersecTasks />}
+                        {domain === 'cad' && <CADTasks />}
                     </div>
                 </div>
                 <div className='w-[90%] m-auto'>

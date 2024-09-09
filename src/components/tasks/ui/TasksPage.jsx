@@ -32,6 +32,12 @@ const tasks = [
     image: "/tasks/iot.webp", // Placeholder image for ML
     link: "/tasks/iot",
   },
+  {
+    id: 5,
+    title: "CAD(Computer Aided Design)",
+    image: "/tasks/cad.png",
+    link: "/tasks/cad",
+  },
 ];
 
 function TasksPage() {

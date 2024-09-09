@@ -8,11 +8,11 @@ import Hero from '../components/Home-Hero-Section/Hero';
 const Home = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col">
-      <div className="flex flex-col md:flex-row items-center mt-48 px-4 ml-16">
+      <div className="flex flex-col md:flex-row items-center mt-48 relative">
         <div className="flex-1 md:ml-36">
           <Hero />
         </div>
-        <div className="flex-1 mt-16 md:mt-36 md:ml-96">
+        <div className="flex-1 self-end ml-96">
           <Spline
             scene="https://prod.spline.design/70rWXJWtYcdln4iF/scene.splinecode"
             width={512}
