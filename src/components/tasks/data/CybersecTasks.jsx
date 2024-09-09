@@ -1,42 +1,68 @@
 import React from "react";
-import { FaShieldAlt, FaLock, FaUserSecret } from "react-icons/fa"; // Import icons from react-icons
+import { FaQuestionCircle, FaFlagCheckered } from "react-icons/fa";
 
 const CybersecTasks = () => (
-  <div className=" bg-black text-white px-8 py-12">
+  <div className="bg-black text-white px-8 py-12">
     <h2 className="text-4xl font-bold text-green-400 mb-6">
-      <FaShieldAlt className="inline-block mr-2" />
-      Cybersecurity Tasks
+      <FaQuestionCircle className="inline-block mr-2" />
+      Cybersecurity Challenges
     </h2>
     <p className="text-lg mb-8">
-      Enhance your cybersecurity skills with these tasks that focus on securing
-      systems, networks and applications.
+      Solve the QR code to access the link and embark on a series of tasks that
+      will guide you closer to uncovering the flag. Each completed task brings
+      you one step closer to the final goal.
     </p>
+    
+    {/* QR Code Section */}
+    <div className="text-center mb-8">
+      <img src="/tasks/cybersecqr.jpg" alt="QR Code" className="h-1/4 w-1/4 m-auto"/>
+      <p className="mt-4 text-lg text-gray-400">
+        Scan the QR code to get started!
+      </p>
+    </div>
+
+    {/* Task List Section */}
     <ul className="space-y-8">
       <li className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:-translate-y-2">
         <h3 className="text-2xl font-semibold text-green-400 mb-4">
-          Task 1: Build a Secure Authentication System
+          Resources and References
         </h3>
         <p className="mb-4">
-          Develop a secure user authentication system with encrypted
-          communication.
+          Here are some useful resources to help you with the tasks:
         </p>
-        <FaLock className="text-green-400 text-3xl mb-4" />
-        <pre className="bg-black text-white p-4 rounded-md">
-          <code>{/* Code for Task 1 goes here */}</code>
-        </pre>
-      </li>
-      <li className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:-translate-y-2">
-        <h3 className="text-2xl font-semibold text-green-400 mb-4">
-          Task 2 (Advanced): Penetration Testing of a Web Application
-        </h3>
-        <p className="mb-4">
-          Perform a penetration test on a web application to identify and
-          mitigate vulnerabilities.
-        </p>
-        <FaUserSecret className="text-green-400 text-3xl mb-4" />
-        <pre className="bg-black text-white p-4 rounded-md">
-          <code>{/* Code for Task 2 (Advanced) goes here */}</code>
-        </pre>
+        <ul className="list-disc pl-6">
+          <li>
+            <a 
+              href="https://www.thonky.com/qr-code-tutorial/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-green-400 hover:underline"
+            >
+              QR Code Tutorial
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://www.geeksforgeeks.org/cryptography-and-its-types/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-green-400 hover:underline"
+            >
+              Cryptography and Its Types
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://owasp.org/www-project-web-security-testing-guide/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-green-400 hover:underline"
+            >
+              OWASP Web Security Testing Guide
+            </a>
+          </li>
+        </ul>
+        <FaFlagCheckered className="text-green-400 text-3xl mb-4" />
       </li>
     </ul>
   </div>

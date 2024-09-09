@@ -73,7 +73,7 @@ const MultipurposeTasksPage = () => {
                         {domain === 'appd' && <AppDevTasks />}
                         {domain === 'iot' && <ComingSoon />}
                         {domain === 'ml' && <MlTasks />}
-                        {domain === 'cybersec' && <ComingSoon />}
+                        {domain === 'cybersec' && <CybersecTasks />}
                     </div>
                 </div>
                 <div className='w-[90%] m-auto'>
