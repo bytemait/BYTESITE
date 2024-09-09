@@ -9,7 +9,7 @@ const AppDevTasks = () => (
       App Development Tasks
     </h2>
     <p className="text-lg mb-8">
-      Test your skills in creating mobile applications with functionalities like real-time user interaction, data storage, and efficient backend integration.
+      Test your skills in creating mobile applications with functionalities like real-time user interaction, data storage and efficient backend integration.
     </p>
 
     <ul className="space-y-8">
