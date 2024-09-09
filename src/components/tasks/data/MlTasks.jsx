@@ -23,7 +23,7 @@ const MlTasks = () => (
           The goal is to classify text data from English, French, and German as
           either Spam or Ham using a logistic regression model.
         </p>
-        <pre className="bg-black text-white p-4 rounded-md">
+        <pre className="bg-black text-white p-4 rounded-md overflow-x-auto max-w-full">
           <code>{`
 Objective:
 - Classify text as Spam or Ham using a logistic regression model.
@@ -57,7 +57,7 @@ Instructions:
           Detect, classify, and count vehicles passing through a specified
           polygon region in a video using models like YOLO or Faster R-CNN.
         </p>
-        <pre className="bg-black text-white p-4 rounded-md">
+        <pre className="bg-black text-white p-4 rounded-md overflow-x-auto max-w-full">
           <code>{`
 Objective:
 - Detect and classify vehicles within a specific region in a video.
