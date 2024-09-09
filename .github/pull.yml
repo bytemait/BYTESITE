@@ -1,5 +1,5 @@
 version: "1"
 rules:
   - base: main
-    upstream: bytemait:master
+    upstream: bytemait:main
     mergeMethod: hardreset
