@@ -19,7 +19,7 @@ const CustomSidebar = ({ isOpen, toggleSidebar }) => (
             <li><Link to="/tasks/appd" className="text-white hover:text-green-400">App Development</Link></li>
             <li><Link to="/tasks/iot" className="text-white hover:text-green-400">Iot(Internet Of Things)</Link></li>
             <li><Link to="/tasks/ml" className="text-white hover:text-green-400">Machine Learning</Link></li>
-            <li><Link to="/tasks/cybersec" className="text-white hover:text-green-400">App Development</Link></li>
+            <li><Link to="/tasks/cybersec" className="text-white hover:text-green-400">Cyber Security</Link></li>
         </ul>
     </div>
 );
