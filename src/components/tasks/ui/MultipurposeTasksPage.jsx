@@ -73,7 +73,7 @@ const MultipurposeTasksPage = () => {
                     <div className="flex-1 overflow-auto">
                         {domain === 'webd' && <WebDevTasks />}
                         {domain === 'appd' && <AppDevTasks />}
-                        {domain === 'iot' && <ComingSoon />}
+                        {domain === 'iot' && <IotTasks />}
                         {domain === 'ml' && <MlTasks />}
                         {domain === 'cybersec' && <CybersecTasks />}
                         {domain === 'cad' && <CADTasks />}
