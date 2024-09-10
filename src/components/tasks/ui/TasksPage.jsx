@@ -33,13 +33,25 @@ const tasks = [
     link: "/tasks/iot",
   },
   {
-    id: 5,
+    id: 6,
     title: "CAD(Computer Aided Design)",
     image: "/tasks/cad.png",
     link: "/tasks/cad",
   },
   {
-    id: 6,
+    id: 7,
+    title: "UI-UX",
+    image: "/tasks/ux.jpg",
+    link: "/tasks/uiux",
+  },
+  {
+    id: 8,
+    title: "Video Editing",
+    image: "/tasks/video.jpg",
+    link: "/tasks/video",
+  },
+  {
+    id: 9,
     title: "DevOps(100x Devs)",
     image: "/tasks/devops.webp",
     link: "/tasks/devops",

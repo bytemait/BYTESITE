@@ -11,6 +11,8 @@ import { FaTasks } from 'react-icons/fa';
 import KeyTakeaways from '../data/KeyTakeaways';
 import CADTasks from '../data/CADTask';
 import DevOps from '../data/DevOps';
+import UiUx from '../data/UiUx';
+import VideoTask from '../data/Video';
 
 // Custom Sidebar Component
 const CustomSidebar = ({ isOpen, toggleSidebar }) => (
@@ -23,6 +25,9 @@ const CustomSidebar = ({ isOpen, toggleSidebar }) => (
             <li><Link to="/tasks/ml" className="text-white hover:text-green-400">Machine Learning</Link></li>
             <li><Link to="/tasks/cybersec" className="text-white hover:text-green-400">Cyber Security</Link></li>
             <li><Link to="/tasks/cad" className="text-white hover:text-green-400">CAD</Link></li>
+            <li><Link to="/tasks/devops" className="text-white hover:text-green-400">Devops</Link></li>
+            <li><Link to="/tasks/uiux" className="text-white hover:text-green-400">UI-UX</Link></li>
+            <li><Link to="/tasks/video" className="text-white hover:text-green-400">Video Editing</Link></li>
         </ul>
     </div>
 );
@@ -79,6 +84,8 @@ const MultipurposeTasksPage = () => {
                         {domain === 'cybersec' && <CybersecTasks />}
                         {domain === 'cad' && <CADTasks />}
                         {domain === 'devops' && <DevOps />}
+                        {domain === 'uiux' && <UiUx />}
+                        {domain === 'video' && <VideoTask />}
                     </div>
                 </div>
                 <div className='w-[90%] m-auto'>
