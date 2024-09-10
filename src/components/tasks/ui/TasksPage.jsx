@@ -38,6 +38,12 @@ const tasks = [
     image: "/tasks/cad.png",
     link: "/tasks/cad",
   },
+  {
+    id: 6,
+    title: "DevOps(100x Devs)",
+    image: "/tasks/devops.webp",
+    link: "/tasks/devops",
+  },
 ];
 
 function TasksPage() {
