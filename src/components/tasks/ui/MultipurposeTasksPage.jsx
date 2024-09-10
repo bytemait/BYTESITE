@@ -10,6 +10,7 @@ import ComingSoon from '../ComingSoon';
 import { FaTasks } from 'react-icons/fa';
 import KeyTakeaways from '../data/KeyTakeaways';
 import CADTasks from '../data/CADTask';
+import DevOps from '../data/DevOps';
 
 // Custom Sidebar Component
 const CustomSidebar = ({ isOpen, toggleSidebar }) => (
@@ -77,6 +78,7 @@ const MultipurposeTasksPage = () => {
                         {domain === 'ml' && <MlTasks />}
                         {domain === 'cybersec' && <CybersecTasks />}
                         {domain === 'cad' && <CADTasks />}
+                        {domain === 'devops' && <DevOps />}
                     </div>
                 </div>
                 <div className='w-[90%] m-auto'>
