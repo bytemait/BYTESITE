@@ -21,7 +21,6 @@ const DevOps = () => (
         <p className="mb-4">
             What really happened with Aaron Swartz? <br />
           Setup and run the repository <a href="https://github.com/mame/quine-relay"  target="_blank" className="text-blue-400 underline">https://github.com/mame/quine-relay</a> on your device. Thats it! Enjoy Hacking! <br />
-          Jo kar de usey bina interview ke sidha core team mein entry
         </p>
         {/* <ul className="list-disc list-inside mb-4">
           <li>Implement real-time location tracking using geolocation services.</li>
