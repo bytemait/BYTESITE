@@ -44,7 +44,7 @@ const IotTasks = () => (
 
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
         <h3 className="text-2xl font-semibold text-green-400 mb-4">
-          Research Paper: Exploring Internet of Things (IoT) with Arduino and Rust
+          Exploring Internet of Things (IoT) with Arduino and Rust
         </h3>
         <FaMicrochip className="text-green-400 text-3xl mb-4" />
         <h4 className="text-xl font-bold mb-2">Abstract</h4>
