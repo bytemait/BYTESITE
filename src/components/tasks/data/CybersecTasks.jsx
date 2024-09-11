@@ -15,7 +15,7 @@ const CybersecTasks = () => (
     
     {/* QR Code Section */}
     <div className="text-center mb-8">
-      <img src="/tasks/cybersecqr.jpg" alt="QR Code" className="h-1/4 w-1/4 m-auto"/>
+      <img src="/tasks/cybersecqr2.jpg" alt="QR Code" className="h-1/4 w-1/4 m-auto"/>
       <p className="mt-4 text-lg text-gray-400">
         Scan the QR code to get started!
       </p>
