@@ -1,23 +1,21 @@
 import React from "react";
+import image from "./rectImage1.png";
 
 const Rectangle = ({
   width = 150,
-  height = 325,
-  color = "gray",
-  borderRadius = 10,
-  image,
+  height = 300,
+  color = "gray"
 }) => {
   const rectangleStyle = {
     width: `${width}px`,
     height: `${height}px`,
     backgroundColor: color,
-    borderRadius: `${borderRadius}px`,
     backgroundImage: `url(${image})`,
-    backgroundSize: "cover", // Ensures the image covers the entire rectangle
-    backgroundPosition: "center", // Centers the image
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   };
 
-  return <div style={rectangleStyle} className="rectangle"></div>;
+  return <div style={rectangleStyle} className="rectangle rounded-3xl"></div>;
 };
 
 export default Rectangle;
