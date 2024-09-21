@@ -15,7 +15,7 @@ function TaskCard({ title, image, link }) {
     >
       <img src={image} alt={title} className="w-full h-40 object-cover" />
       <div className="p-4 text-white">
-        <h2 className="text-xl font-semibold text-center">{title}</h2>
+        <h2 className="text-xl font-semibold text-center mb-36px">{title}</h2>
       </div>
     </div>
   );
