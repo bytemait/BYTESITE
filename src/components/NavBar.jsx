@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
-import { HiMenu, HiX } from "react-icons/hi"
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi";
 
 function NavBar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleToggle = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setScrolled(true)
-        setIsOpen(false)
+        setScrolled(true);
+        setIsOpen(false);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -139,7 +139,7 @@ function NavBar() {
         </NavLink>
       </div>
     </div>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
