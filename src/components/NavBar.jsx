@@ -14,6 +14,7 @@ function NavBar() {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
+        setIsOpen(false);
       } else {
         setScrolled(false);
       }
@@ -28,7 +29,7 @@ function NavBar() {
 
   return (
     <div
-      className={`w-full h-16 fixed top-0 z-50 flex items-center p-2 transition-all duration-300 ${scrolled ? 'bg-black bg-opacity-70 backdrop-blur-md' : 'bg-black bg-opacity-50'}`}
+      className={`w-full h-16 fixed top-0 z-50 flex items-center p-2 transition-all duration-300 ${scrolled ? "bg-black bg-opacity-70 backdrop-blur-md" : "bg-black bg-opacity-50"}`}
     >
       <div className="w-full flex items-center justify-between md:justify-center">
         {/* Mobile View: Hamburger Button and Logo */}
@@ -82,7 +83,8 @@ function NavBar() {
           <NavLink
             to="/tasks"
             className={({ isActive }) =>
-              `relative text-white text-lg font-medium px-4 py-2 rounded-md ${isActive ? "border-b-2 border-green-500" : ""
+              `relative text-white text-lg font-medium px-4 py-2 rounded-md ${
+                isActive ? "border-b-2 border-green-500" : ""
               } group glow-effect`
             }
           >
@@ -94,8 +96,11 @@ function NavBar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${isOpen ? "translate-y-0 bg-opacity-70 backdrop-blur-md" : "-translate-y-full"
-          }`}
+        className={`fixed overflow-hidden h-screen inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${
+          isOpen
+            ? "translate-y-0 bg-opacity-100 backdrop-blur-md"
+            : "-translate-y-full"
+        }`}
       >
         <NavLink
           to="/"
