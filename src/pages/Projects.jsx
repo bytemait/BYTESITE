@@ -48,13 +48,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="h-screen bg-gradient-to-b from-[#000000] to-[#032703]">
+    <div className="min-h-screen bg-gradient-to-b from-[#000000] to-[#032703]">
       <div className="flex flex-col justify-center items-center pt-24  text-center md:text-left">
         <div className="flex flex-col md:flex-row items-center md:items-end gap-6 md:gap-6 md:mr-48">
-          <span className="text-7xl md:text-9xl font-extrabold tracking-widest bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
+          <span className="main-title text-7xl md:text-9xl font-extrabold tracking-widest bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
             BYTE
           </span>
-          <div className="flex flex-col tracking-widest text-center md:text-left">
+          <div className="subtitle flex flex-col tracking-widest text-center md:text-left">
             <span className="text-[#4AFAAB] text-lg md:text-2xl font-bold">
               Solving Problems
             </span>
@@ -63,7 +63,7 @@ const Projects = () => {
             </span>
           </div>
         </div>
-        <p className="text-6xl md:text-9xl font-extrabold tracking-widest bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent mt-6 md:ml-10">
+        <p className="projects-title text-6xl md:text-9xl font-extrabold tracking-widest bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent mt-6 md:ml-10">
           PROJECTS
         </p>
       </div>

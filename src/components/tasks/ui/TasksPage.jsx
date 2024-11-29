@@ -23,19 +23,19 @@ const tasks = [
   {
     id: 4,
     title: "Cyber Security",
-    image: "/tasks/cybersec.webp", // Placeholder image for ML
+    image: "/tasks/cybersec.jpg", // Placeholder image for ML
     link: "/tasks/cybersec",
   },
   {
     id: 5,
     title: "IOT(Internet of things)",
-    image: "/tasks/iot.webp", // Placeholder image for ML
+    image: "/tasks/iot.jpg", // Placeholder image for ML
     link: "/tasks/iot",
   },
   {
     id: 6,
     title: "CAD(Computer Aided Design)",
-    image: "/tasks/cad.png",
+    image: "/tasks/cad.jpg",
     link: "/tasks/cad",
   },
   {
@@ -53,7 +53,7 @@ const tasks = [
   {
     id: 9,
     title: "DevOps(100x Devs)",
-    image: "/tasks/devops.webp",
+    image: "/tasks/devops.jpg",
     link: "/tasks/devops",
   },
 ];
