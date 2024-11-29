@@ -7,7 +7,7 @@ import Hero from '../components/Home-Hero-Section/Hero';
 
 const Home = () => {
   return (
-    <div className="bg-black min-h-screen flex flex-col">
+    <div className="bg-black min-h-screen flex flex-col pt-8">
       <div className="flex flex-col md:flex-row items-center mt-48 relative">
         <div className="flex-1 md:ml-36">
           <Hero />
