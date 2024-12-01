@@ -17,22 +17,30 @@ const BlogPage = () => {
 
     return (
         <div className="flex flex-col min-h-screen mt-16">
-            <section className="relative bg-cover bg-center h-auto py-56"
-                style={{ backgroundImage: "url('https://www.blender.org/wp-content/uploads/2024/10/blender_43_splash.webp')" }}>
-                <div className='absolute bottom-0 w-full px-8 flex justify-between'>
-                    <div className="bottom-0 max-w-2xl text-white">
+            <section
+                className="relative bg-cover bg-center h-auto py-64"
+                style={{
+                    backgroundImage: "url('https://4kwallpapers.com/images/walls/thumbs_3t/15593.png')",
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className='absolute bottom-0 w-full px-8 flex justify-between z-10'>
+                    <div className=" max-w-2xl text-white">
                         <h1 className="text-4xl font-bold mb-4">Exploring the Wonders of Coding</h1>
                         <p className="text-lg mb-8">An amazing victory, this post unveils the secrets that made our project possible.</p>
                     </div>
                     <div className="flex items-center mt-4 text-gray-100 text-sm">
                         <img
-                            src="/author-avatar.jpg"
+                            src="https://lh3.googleusercontent.com/a/ACg8ocLvDyoV20-zjbSQvmih9SIzHj-PGijbhZQ0A37n3-uhs84mlyz9=s476-c-no"
                             alt="Author"
                             className="w-8 h-8 rounded-full mr-2"
                         />
-                        <span>Abc xyz</span>
+                        <span>Abir Thakur</span>
                         <span className="mx-2">•</span>
-                        <span>24 Jan 2024</span>
+                        <span>31 Nov 2024</span>
                         <span className="mx-2">•</span>
                         <span>10 mins read</span>
                     </div>

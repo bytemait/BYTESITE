@@ -83,8 +83,16 @@ function NavBar() {
           <NavLink
             to="/tasks"
             className={({ isActive }) =>
-              `relative text-white text-lg font-medium px-4 py-2 rounded-md ${
-                isActive ? "border-b-2 border-green-500" : ""
+              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
+               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
+            }
+          >
+            Tasks
+          </NavLink>
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              `relative text-white text-lg font-medium px-4 py-2 rounded-md ${isActive ? "border-b-2 border-green-500" : ""
               } group glow-effect`
             }
           >
@@ -96,11 +104,10 @@ function NavBar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed overflow-hidden h-screen inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${
-          isOpen
+        className={`fixed overflow-hidden h-screen inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${isOpen
             ? "translate-y-0 bg-opacity-100 backdrop-blur-md"
             : "-translate-y-full"
-        }`}
+          }`}
       >
         <NavLink
           to="/"
