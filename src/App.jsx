@@ -12,22 +12,33 @@ import Aboutus from "./pages/Aboutus";
 import Footer from "./components/Footer";
 import MultipurposeTasksPage from "./components/tasks/ui/MultipurposeTasksPage";
 import TasksPage from "./components/tasks/ui/TasksPage";
+import { UserContextProvider } from "./pages/Blog/UserContext";
+import blogRoutes from "./pages/Blog/blogRoutes";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
-    <Router>
-      <NavBar />
+    <UserContextProvider>
+      <Router>
+        <NavBar />
         <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<Aboutus />}/>
-            <Route path="/tasks" element={<TasksPage />}/>
-            <Route path="/tasks/:domain" element={<MultipurposeTasksPage/>}/>
-            <Route path="/achievements" element={<Achievements />}/>
-            <Route path="/projects" element={<Projects />}/>
-            <Route path="*" element={<Navigate to="/" />}/>
-        </Routes>
-      <Footer/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Aboutus />} />
+          <Route path="/tasks" element={<TasksPage />} />
+          <Route path="/tasks/:domain" element={<MultipurposeTasksPage />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/projects" element={<Projects />} />
+          {/* Routes for blog */}
+          <Route path="/blog" >
+            {blogRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+          </Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <Footer />
     </Router>
+    </UserContextProvider >
   );
 }
 

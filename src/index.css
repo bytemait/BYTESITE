@@ -301,7 +301,7 @@ p, span, a {
   }
 
   .flex {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
 

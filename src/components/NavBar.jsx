@@ -82,11 +82,21 @@ function NavBar() {
           <NavLink
             to="/tasks"
             className={({ isActive }) =>
+              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
+               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
+            }
+          >
+            Tasks
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </NavLink>
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
               `relative text-white text-lg font-medium px-4 py-2 rounded-md ${isActive ? "border-b-2 border-green-500" : ""
               } group glow-effect`
             }
           >
-            Tasks
+            Blog
             <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </NavLink>
         </div>
@@ -131,6 +141,13 @@ function NavBar() {
           onClick={handleToggle}
         >
           Tasks
+        </NavLink>
+        <NavLink
+          to="/blog"
+          className="text-white text-lg py-2"
+          onClick={handleToggle}
+        >
+          Blog
         </NavLink>
       </div>
     </div>
