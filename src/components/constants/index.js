@@ -53,27 +53,34 @@ const services = [
   },
 ];
 
+const maleImage = "https://i.pinimg.com/736x/e8/0a/22/e80a22544de41b6e937c55a8ab4b6405.jpg";  
+const femaleImage = "https://img.freepik.com/premium-photo/female-developer-background_665280-9660.jpg";  
+
 const teamMembers = {
   "Web Dev Team": [
     {
       name: "Ishaan Minocha",
       role: "Full Stack Developer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Adisht Jaglan",
       role: "Back-end Developer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
-      name: "Aman ",
+      name: "Aman",
       role: "Full-stack Developer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Abir Thakur",
       role: "UI/UX Designer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
   ],
   "AI/ML Team": [
@@ -81,21 +88,25 @@ const teamMembers = {
       name: "Shivam Gupta",
       role: "Machine Learning",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Nalin Khanna",
-      role: "Machine Learning)",
+      role: "Machine Learning",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Ujjwal ",
       role: "ML Engineer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },  
     {
       name: "Chayan Mann ",
       role: "ML Engineer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },  
   ],
   "IOT Team": [
@@ -103,21 +114,25 @@ const teamMembers = {
       name: "Tanush Parwar",
       role: "IOT",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Shivam Kumar Jha",
       role: "IOT",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Ashish Negi",
       role: "IOT",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Subhashish Panda",
       role: "IoT Analyst",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
   ],
   "Design Team": [
@@ -125,25 +140,35 @@ const teamMembers = {
       name: "Khushi Minda",
       role: "UI Designer",
       image: "https://via.placeholder.com/150",
+      gender: "female",
     },
     
     {
       name: "Anisha Dua",
       role: "UX Researcher",
       image: "https://via.placeholder.com/150",
+      gender: "female",
     },
     {
       name: "Ansh Kapila",
       role: "Graphic Designer",
       image: "https://via.placeholder.com/150",
+      gender: "male",
     },
     {
       name: "Swasti",
       role: "Motion Designer",
       image: "https://via.placeholder.com/150",
+      gender: "female",
     },
   ],
 };
+
+Object.keys(teamMembers).forEach((team) => {
+  teamMembers[team].forEach((member) => {
+    member.image = member.gender === "male" ? maleImage : femaleImage;
+  });
+});
 
 const technologies = [
   {
