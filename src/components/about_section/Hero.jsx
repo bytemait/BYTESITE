@@ -5,7 +5,7 @@ import ComputersCanvas from './canvas/Computers'
 const Hero = () => {
   return (
     <section className='relative w-full h-screen mx-auto'>
-      <div className='sm: px-16 px-6 absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5'>
+      <div className='sm:px-16 px-6 absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5'>
         <div className='flex flex-col justify-center items-center mt-10 '>
           <div className='w-5 h-5 rounded-full bg-[#4afaab]' />
           <div className='w-1 sm:h-80 h-40 green-gradient' />
@@ -15,7 +15,7 @@ const Hero = () => {
             WE ARE BYTE
           </h1>
           <p className="font-Space text-lg mt-4">
-            Welcome to BYTE, where innovation meets reality.We are a dynamic group of students driven by a passion for technology and a commitment to bringing ideas to life. From the realms of IoT and  web development to the intricacies of cybersecurity and machine learning; our society thrives on exploration and  creation.
+          Welcome to BYTE, where innovation meets reality. We are a dynamic group of students driven by a passion for technology and a commitment to bringing ideas to life. From the realms of IoT and web development to the intricacies of cybersecurity and machine learning, our society thrives on exploration and creation.
           </p>
         </div>
       </div>
