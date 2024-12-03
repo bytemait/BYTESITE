@@ -201,6 +201,36 @@ const technologies = [
 ];
 const experiences = [
   {
+    title: "1st Place - Women Innovathon 2024",
+    winner_name: "Khushi Minda, Anisha Dua, Vidushi V., Sneha Sharma",
+    date: "October 2024",
+    points: [
+      "After 6000+ registrations, our team was selected among the top 5 teams.",
+      "Team Swasthya PRE(AR)NA secured 1st place with their groundbreaking healthcare prototype.",
+      "The achievement followed 3 months of mentorship and intense competition."
+    ],
+  },
+  {
+    title: "1st Runner-up - IIIT Nagpur Designathon 2024",
+    winner_name: "Tanush Purwar, Vipul Kohli, Pratyaksh Agarwal",
+    date: "October 2024",
+    points: [
+      "Out of 45+ teams, our team was shortlisted among the 11 for the offline round.",
+      "We tackled tough challenges like no buttons, interactive backgrounds, and three clickable events.",
+      "Secured 1st Runner-up at the national-level IIIT Nagpur Designathon!"
+    ],
+  },
+  {
+    title: "Innovative Track - Hack7day GTBIT - 1st Position",
+    winner_name: "Krish Malik, Dev Garg",
+    date: "October 2024",
+    points: [
+      "The team faced daily online rounds and a 12-hour intense offline hackathon.",
+      "Their exceptional teamwork and innovation in the AI/ML domain earned them this remarkable achievement.",
+      "This victory was secured in the Web 2 track, with a special focus on AI/ML."
+    ],
+  },
+  {
     title: "Build For Bharat 2024 - 1st Position",
     winner_name: "Shivam , Ishaan , Aman",
     
