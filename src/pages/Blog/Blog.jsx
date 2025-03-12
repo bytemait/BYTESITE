@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./UserContext";
 import { TbEdit } from "react-icons/tb";
@@ -18,7 +18,7 @@ const Blog = () => {
         setBlogData(data);
       });
     });
-  }, []);
+  }, [apiUrl, id]);
 
   useEffect(() => {
     fetch(`${apiUrl}/profile`, {
@@ -28,7 +28,7 @@ const Blog = () => {
         setUserInfo(UserInfo);
       });
     });
-  }, []);
+  }, [apiUrl, setUserInfo]);
 
   const handleEdit = () => {
     navigate(`/blog/edit/${blogData._id}`, { state: { blogData } });
