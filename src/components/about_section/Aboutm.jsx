@@ -34,39 +34,39 @@ const TeamMember = ({ name, role, image }) => (
 
 const ServiceCard = ({ index, title, icon, showTeam, handleShowTeam }) => (
   <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-        onClick={() => handleShowTeam(title)}
+    <motion.div
+      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      onClick={() => handleShowTeam(title)}
+    >
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary rounded-[20px] py-5 px-12 flex justify-evenly items-center flex-col cursor-pointer"
       >
-          <div
-            options={{
-              max: 45,
-              scale: 1,
-              speed: 450,
-            }}
-            className="bg-tertiary rounded-[20px] py-5 px-12 flex justify-evenly items-center flex-col cursor-pointer"
-          >
-            <img src={icon} alt={title} className="w-10 h-10 object-contain" />
-            <h3 className="text-white text-lg font-bold text-center">{title}</h3>
-          </div>
-      </motion.div>
-      <AnimatePresence>
-        {showTeam === title && (
-            <motion.div
-              key={`team-${title}`}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={teamContainerVariants}
-              className="mt-10"
-            >
-              {teamMembers[title].map((member, index) => (
-                <TeamMember key={index} {...member} />
-              ))}
-            </motion.div>
-        )}
-      </AnimatePresence>
+        <img src={icon} alt={title} className="w-10 h-10 object-contain" />
+        <h3 className="text-white text-lg font-bold text-center">{title}</h3>
+      </div>
+    </motion.div>
+    <AnimatePresence>
+      {showTeam === title && (
+        <motion.div
+          key={`team-${title}`}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={teamContainerVariants}
+          className="mt-10"
+        >
+          {teamMembers[title].map((member, index) => (
+            <TeamMember key={index} {...member} />
+          ))}
+        </motion.div>
+      )}
+    </AnimatePresence>
   </Tilt>
 );
 
@@ -102,42 +102,55 @@ const Aboutm = () => {
   };
 
   return (
-    <div className='justify-center items-center flex-col px-16 py-10'>
+    <motion.div
+      className='justify-center items-center flex-col px-16 py-10'
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+    >
       <motion.div className="bg-gradient-to-b from-green-800 to-black text-white p-8 rounded-lg shadow-lg">
-          <motion.h1 initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1 }} className="font-Space text-6xl font-bold mb-4">
-              {visions[currentVision].title}
-          </motion.h1>
-          <motion.h2 initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="font-Space text-3xl mb-6">
-              {visions[currentVision].subtitle}
-          </motion.h2>
-          <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1 }}
-              className="font-Space text-xl mt-4 leading-[35px]">
-              {visions[currentVision].description}
-          </motion.p>
+        <motion.h1 initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.6 }} className="font-Space text-6xl font-bold mb-4">
+          {visions[currentVision].title}
+        </motion.h1>
+        <motion.h2 initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="font-Space text-3xl mb-6">
+          {visions[currentVision].subtitle}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="font-Space text-xl mt-4 leading-[35px]">
+          {visions[currentVision].description}
+        </motion.p>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-10 justify-center items-center">
-          {services.map((service, index) => (
-              <ServiceCard
-                  key={service.title}
-                  index={index}
-                  title={service.title}
-                  icon={service.icon}
-                  showTeam={showTeam}
-                  handleShowTeam={handleShowTeam}
-              />
-          ))}
-      </div>
-    </div>
+      <motion.div className="mt-20 flex flex-wrap gap-10 justify-center items-center">
+        {services.map((service, index) => (
+          <motion.div key={service.title}
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: index * 0.3 }}
+          >
+            <ServiceCard
+              key={service.title}
+              index={index}
+              title={service.title}
+              icon={service.icon}
+              showTeam={showTeam}
+              handleShowTeam={handleShowTeam}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.div>
   );
 };
 
 export default Aboutm;
+

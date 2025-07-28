@@ -11,12 +11,33 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 green-gradient' />
         </div>
         <div className='text-white p-6 font-Poppins'>
-          <h1 className='font-Space text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-600'>
+          <motion.h1 
+          className='font-Space text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-600'
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, delay:1 }}
+          >
             WE ARE BYTE
-          </h1>
-          <p className="font-Space text-lg mt-4">
-          Welcome to BYTE, where innovation meets reality. We are a dynamic group of students driven by a passion for technology and a commitment to bringing ideas to life. From the realms of IoT and web development to the intricacies of cybersecurity and machine learning, our society thrives on exploration and creation.
-          </p>
+          </motion.h1>
+          <div className="font-Space text-lg mt-4">
+          <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.5 }}
+          >
+          Welcome to BYTE, where innovation meets reality. We are a dynamic group of students driven by a passion for technology</motion.p>
+          <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.5 }}
+          >and a commitment to bringing ideas to life. From the realms of IoT and web development to the intricacies of cybersecurity</motion.p>
+          <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.5 }}
+          >and machine learning, our society thrives on exploration and creation.
+          </motion.p>
+          </div>
         </div>
       </div>
       <ComputersCanvas />

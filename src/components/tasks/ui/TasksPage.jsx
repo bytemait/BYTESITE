@@ -1,5 +1,6 @@
 import React from "react";
 import TaskCard from "./TaskCard";
+import { motion } from "motion/react";
 
 const tasks = [
   {
@@ -61,10 +62,17 @@ const tasks = [
 function TasksPage() {
   return (
     <div className="min-h-screen bg-black flex flex-col items-center pb-10 pt-24">
-      <h1 className="text-4xl font-bold text-green-500 mb-8">Tasks</h1>
+      <motion.h1 
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      className="text-6xl font-bold from-[#00ffae] via-white to-[#00ffae] bg-gradient-to-r text-transparent bg-clip-text mb-8">Tasks</motion.h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl">
         {tasks.map((task) => (
-          <TaskCard key={task.id} title={task.title} image={task.image} link={task.link} />
+          <motion.div key={task.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }}>
+            <TaskCard title={task.title} image={task.image} link={task.link} />
+          </motion.div>
+
         ))}
       </div>
     </div>
@@ -72,3 +80,4 @@ function TasksPage() {
 }
 
 export default TasksPage;
+

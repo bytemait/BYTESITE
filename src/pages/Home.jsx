@@ -1,13 +1,14 @@
-import React from 'react';
 import Spline from '@splinetool/react-spline';
-import CardCarousel from '../components/CardCarousel';
 import CardContainer from '../components/CardContainer';
-import HeroMid from '../components/Home-Hero-Section/HeroMid';
 import Hero from '../components/Home-Hero-Section/Hero';
+import ProjectsContainer from '../components/ProjectsContainer';
+import CardCarousel from '../components/CardCarousel';
+import HeroMid from '../components/Home-Hero-Section/HeroMid';
+
 
 const Home = () => {
   return (
-    <div className="bg-black min-h-screen flex flex-col pt-8">
+    <div className="pt-8 bg-black">
       <div className="flex flex-col md:flex-row items-center mt-48 relative">
         <div className="flex-1 md:ml-36">
           <Hero />
@@ -25,6 +26,7 @@ const Home = () => {
         <HeroMid /> */}
         <CardContainer />
       </div>
+      <ProjectsContainer />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Projects = () => {
       ".main-title",
       {
         opacity: 0,
-        y: -50,
+        y: 200,
       },
       {
         opacity: 1,
@@ -35,13 +35,14 @@ const Projects = () => {
       ".projects-title",
       {
         opacity: 0,
+        y: 200,
         scale: 0.5,
       },
       {
         opacity: 1,
+        y: 0,
         scale: 1,
         duration: 1.5,
-        ease: "bounce.out",
       },
       "-=0.5"
     );
@@ -67,7 +68,7 @@ const Projects = () => {
           PROJECTS
         </p>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 min-h-[180vh]">
         <Carousel />
       </div>
     </div>
