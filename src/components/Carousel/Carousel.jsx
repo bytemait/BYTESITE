@@ -76,7 +76,7 @@ export const ProjectCard = ({ project, translate }) => {
           />
         </div>
         <h2 className="text-xl font-bold text-white mb-1 text-center w-full truncate">{project.textAbove}</h2>
-        <a href="#" className="text-green-400 underline text-base text-center w-full">{project.textBelow}</a>
+        <a href={project.link} className="text-green-400 underline text-base text-center w-full">{project.textBelow}</a>
       </div>
     </motion.div>
   );

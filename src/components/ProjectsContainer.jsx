@@ -59,7 +59,8 @@ const ProjectsContainer = () => {
                 features like wireless network scanning, jamming, and analysis.
               </p>
             </div>
-            <button className="mt-4 bg-[#00ffae]/10 text-[#00ffae] border border-[#00ffae] py-2 px-4 rounded-md self-start hover:bg-[#00ffae]/20 transition-colors duration-300 hover:shadow-[0_0_10px_#00ffae]">
+            <button onClick={() => window.open('https://github.com/bytemait/ThothBox')}
+            className="mt-4 bg-[#00ffae]/10 text-[#00ffae] border border-[#00ffae] py-2 px-4 rounded-md self-start hover:bg-[#00ffae]/20 transition-colors duration-300 hover:shadow-[0_0_10px_#00ffae]">
               Learn More
             </button>
           </motion.div>
@@ -83,7 +84,7 @@ const ProjectsContainer = () => {
                 competition.
               </p>
             </div>
-            <button className="mt-4 bg-[#00ffae]/10 text-[#00ffae] border border-[#00ffae] py-2 px-4 rounded-md self-start hover:bg-[#00ffae]/20 transition-colors duration-300 hover:shadow-[0_0_10px_#00ffae]">
+            <button onClick={() => window.open('https://github.com/bytemait/Progmatic')} className="mt-4 bg-[#00ffae]/10 text-[#00ffae] border border-[#00ffae] py-2 px-4 rounded-md self-start hover:bg-[#00ffae]/20 transition-colors duration-300 hover:shadow-[0_0_10px_#00ffae]">
               Learn More
             </button>
           </motion.div>
@@ -106,7 +107,7 @@ const ProjectsContainer = () => {
                 and class schedule to grades, attendance, and assignments.
               </p>
             </div>
-            <button className="mt-4 bg-[#00ffae]/10 text-[#00ffae] border border-[#00ffae] py-2 px-4 rounded-md self-start hover:bg-[#00ffae]/20 transition-colors duration-300 hover:shadow-[0_0_10px_#00ffae]">
+            <button onClick={() => window.open('https://github.com/bytemait/erp')} className="mt-4 bg-[#00ffae]/10 text-[#00ffae] border border-[#00ffae] py-2 px-4 rounded-md self-start hover:bg-[#00ffae]/20 transition-colors duration-300 hover:shadow-[0_0_10px_#00ffae]">
               Learn More
             </button>
           </motion.div>
