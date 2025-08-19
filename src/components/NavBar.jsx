@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import {motion} from "framer-motion";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,10 @@ function NavBar() {
   }, []);
 
   return (
-    <div
+    <motion.div
+      initial={{opacity:1, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 2, ease: "easeInOut" }}
       className={`w-full h-16 fixed top-0 z-50 flex items-center p-2 transition-all duration-300 ${scrolled ? "bg-black bg-opacity-70 backdrop-blur-md" : "bg-black bg-opacity-50"}`}
     >
       <div className="w-full flex items-center justify-between md:justify-center">
@@ -104,7 +108,7 @@ function NavBar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed overflow-hidden h-screen inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${isOpen
+        className={`h-screen inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${isOpen
             ? "translate-y-0 bg-opacity-100 backdrop-blur-md"
             : "-translate-y-full"
           }`}
@@ -152,8 +156,9 @@ function NavBar() {
           Blog
         </NavLink>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 export default NavBar;
+

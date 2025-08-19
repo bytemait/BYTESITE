@@ -1,121 +1,141 @@
-import React from "react";
+import { useScroll, useTransform, motion, easeInOut, delay } from "framer-motion";
+import { useSpring } from "framer-motion";
+import { useRef } from "react";
 
 const CardContainer = () => {
+  const ref = useRef(null);
+  const textRef1 = useRef(null);
+  const textRef2 = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+const textX1 = useTransform(scrollYProgress, [0.3, 0.6], [-300, 0]);
+const textOpacity1 = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
+
+const textX2 = useTransform(scrollYProgress, [0.3, 0.9], [300, 0]);
+const textOpacity2 = useTransform(
+  scrollYProgress,
+  [0.0, 0.49, 0.5, 0.9],
+  [0, 0, 0, 1]
+);
+
+  const rotate = useTransform(scrollYProgress, [0.6, 0.9], ["0deg", "-15deg"]);
+
   return (
-    <div className="bg-gray-900 py-16 px-4 md:px-12 lg:px-24">
-      <h1 className="text-white text-3xl md:text-5xl lg:text-6xl text-center leading-tight mb-12 font-bold tracking-tight">
-        Harvesting Insights from <br /> Diligent Endeavors
-      </h1>
-
-      {/* Add buttons here */}
-      <div className="flex flex-col items-center gap-6">
-        <a
-          href="https://github.com/bytemait"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-black text-white py-3 px-8 border-2 border-green-500 rounded-md text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-green-500"
-          style={{
-            boxShadow: "0 0 15px rgba(0, 255, 0, 0.6)",
-          }}
+    <div className="w-full min-h-[180vh] flex justify-center">
+      <div
+        className="sticky top-0 h-screen w-full flex items-center justify-center"
+        style={{ perspective: "1000px" }}
+      >
+        <div
+          ref={ref}
+          className="w-full h-full flex items-center justify-center"
         >
-          Visit Our GitHub
-        </a>
+          <motion.div
+            initial={{ opacity: 1, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeInOut", delay: 0.5 }}
+            viewport={{ amount: 0.5, once: true }}
+            style={{
+              rotate,
+              transformOrigin: "center center",
+              border: "2px solid #00ffae",
+              minHeight: "80vh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              background: "linear-gradient(135deg, #000000, #0a0a0a)",
+              padding: "2rem",
+              borderRadius: "1rem",
+              overflow: "hidden",
+              maxWidth: "1200px",
+              boxShadow: "0 0 20px #00ffae, 0 0 40px #00ffae",
+            }}
+            className="py-16 px-4 md:px-12 lg:px-24 rounded-xl w-full"
+          >
+            <motion.div
+              ref={textRef1}
+              className="text-3xl md:text-5xl lg:text-6xl text-center leading-tight mb-12 font-bold tracking-tight bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
+              style={{
+                opacity: textOpacity1,
+                x: textX1,
+                backgroundSize: "400% 100%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              transition={{ ease: easeInOut, duration: 1.5 }}
+            >
+              Harvesting Insights from
+            </motion.div>
 
-        <a
-          href="/tasks"
-          className="bg-black text-white py-3 px-8 border-2 border-green-500 rounded-md text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-green-500"
-          style={{
-            boxShadow: "0 0 15px rgba(0, 255, 0, 0.6)",
-          }}
-        >
-          Check Out Tasks for 2024
-        </a>
+            <motion.div
+              ref={textRef2}
+              className="text-3xl md:text-5xl lg:text-6xl text-center leading-tight mb-12 font-bold tracking-tight bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
+              style={{
+                x: textX2,
+                opacity: textOpacity2,
+                backgroundSize: "400% 100%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              Diligent Endeavours
+            </motion.div>
+
+            <div className="flex flex-col items-center gap-6">
+              <motion.a
+                href="https://github.com/bytemait"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white py-3 px-8 border-2 border-green-500 rounded-md text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-green-500"
+                style={{
+                  boxShadow: "0 0 15px rgba(0, 255, 0, 0.6)",
+                }}
+                initial={{ opacity: 0, y: 100, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 1.2,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 20,
+                }}
+                whileHover={{ scale: 1.1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                Visit Our GitHub
+              </motion.a>
+
+              <motion.a
+                href="/tasks"
+                className="bg-black text-white py-3 px-8 border-2 border-green-500 rounded-md text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-green-500"
+                style={{
+                  boxShadow: "0 0 15px rgba(0, 255, 0, 0.6)",
+                }}
+                initial={{ opacity: 0, y: 100, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 1.2,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 20,
+                }}
+                whileHover={{ scale: 1.1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                Check Out Tasks for 2024
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
       </div>
-
-      {/* <div className="flex flex-col gap-16 md:gap-24"> */}
-      {/* Cards commented out */}
-      {/* </div> */}
     </div>
   );
 };
 
 export default CardContainer;
-
-
-{/* <div className="flex flex-col gap-16 md:gap-24">
-  <div className="flex flex-col md:flex-row md:justify-center gap-10 md:gap-20">
-    <div className="flex-1 bg-gray-800 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 max-w-md">
-      <div className="p-6 flex flex-col justify-between">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">
-            BYTELOCKER
-          </h2>
-          <p className="text-gray-300">
-            College security system utilizing OpenCV and facial
-            recognition
-          </p>
-        </div>
-        <div className="text-gray-400 mt-4">
-          <span className="text-sm">#01</span>
-        </div>
-      </div>
-      <div className="relative">
-        <img
-          src="https://img.freepik.com/free-photo/face-recognition-personal-identification-collage_23-2150165599.jpg?t=st=1724369151~exp=1724372751~hmac=8dad7398986b0b1a0027138e1bc63b8b9dbe5e8e9e1be0618a947976915a2bdd&w=1800"
-          alt="BYTELOCKER"
-          className="w-full h-full object-cover rounded-b-lg"
-        />
-      </div>
-    </div>
-
-    <div className="flex justify-between flex-col-reverse bg-gray-800 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 max-w-md">
-      <div className="p-6 flex flex-row justify-between mb-8">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">
-            MR Glass
-          </h2>
-          <p className="text-gray-300">
-            A concept Glasses for Extended Reality (XR) and Mixed Reality
-            (MR)...
-          </p>
-        </div>
-        <div className="text-gray-400 mt-4">
-          <span className="text-sm">#02</span>
-        </div>
-      </div>
-      <div className="">
-        <img
-          src="https://img.freepik.com/free-photo/smart-glasses-with-interactive-lenses-seeing-future_53876-101153.jpg?t=st=1724369379~exp=1724372979~hmac=9acaedbb7ae9d5d92593752d40d466ce5f8de80526bcd198f9f26184e77bdfb7&w=1800"
-          alt="MR Glass"
-          className="w-full h-full object-fill rounded-b-lg"
-        />
-      </div>
-    </div>
-  </div>
-
-  <div className="flex justify-center">
-    <div className="bg-gray-800 flex h-80 bg-opacity-80 border border-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-opacity-90 w-[66%]">
-      <div className="p-6 flex flex-col justify-between">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">
-            RoboSoccer
-          </h2>
-          <p className="text-gray-300">
-            A robot using Bluetooth commands sent from a smartphone or
-            another Bluetooth-capable device.
-          </p>
-        </div>
-        <div className="text-gray-400 mt-4">
-          <span className="text-sm">#03</span>
-        </div>
-      </div>
-      <div className="relative">
-        <img
-          src="https://i.imghippo.com/files/lwiKK1724369665.png"
-          alt="RoboSoccer"
-          className="w-full h-full object-cover rounded-b-lg"
-        />
-      </div>
-    </div>
-  </div>
-</div> */}
