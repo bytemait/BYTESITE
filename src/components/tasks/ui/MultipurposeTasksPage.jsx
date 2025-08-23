@@ -90,12 +90,6 @@ const MultipurposeTasksPage = () => {
                 </div>
                 <div className='w-[90%] m-auto'>
                     <KeyTakeaways/>
-                    
-                    <br />
-                    <h1 className="text-5xl text-center font-bold text-green-400 mb-8 animate-pulse">
-                        Happy Hacking!!
-                    </h1>
-                    <hr className='bg-green-600 py-[1px]'/>
                 </div>
                 <br />
                 <br />
