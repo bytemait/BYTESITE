@@ -1,8 +1,8 @@
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Achievements from "./pages/Achievements";
@@ -17,29 +17,32 @@ import blogRoutes from "./pages/Blog/blogRoutes";
 import BlogPage from "./pages/BlogPage";
 
 function App() {
-  return (
-    <UserContextProvider>
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Aboutus />} />
-          <Route path="/tasks" element={<TasksPage />} />
-          <Route path="/tasks/:domain" element={<MultipurposeTasksPage />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="/projects" element={<Projects />} />
-          {/* Routes for blog */}
-          <Route path="/blog" >
-            {blogRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-          </Route>
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-      <Footer />
-    </Router>
-    </UserContextProvider >
-  );
+	return (
+		<UserContextProvider>
+			<Router>
+				<NavBar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<Aboutus />} />
+					<Route path="/tasks" element={<TasksPage />} />
+					<Route
+						path="/tasks/:domain"
+						element={<MultipurposeTasksPage />}
+					/>
+					<Route path="/achievements" element={<Achievements />} />
+					<Route path="/projects" element={<Projects />} />
+					{/* Routes for blog */}
+					<Route path="/blog">
+						{blogRoutes.map(({ path, element }) => (
+							<Route key={path} path={path} element={element} />
+						))}
+					</Route>
+					<Route path="*" element={<Navigate to="/" />} />
+				</Routes>
+				<Footer />
+			</Router>
+		</UserContextProvider>
+	);
 }
 
 export default App;
