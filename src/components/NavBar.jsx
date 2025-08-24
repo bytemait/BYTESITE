@@ -1,164 +1,146 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import {motion} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+const links = [
+  { name: "Home", path: "/" },
+  { name: "Achievements", path: "/achievements" },
+  { name: "Projects", path: "/projects" },
+  { name: "About Us", path: "/about" },
+  { name: "Tasks", path: "/tasks" },
+  { name: "Blog", path: "/blog" }
+];
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-        setIsOpen(false);
-      } else {
-        setScrolled(false);
-      }
+    const onScroll = () => {
+      setScrolled(window.scrollY > 60);
+      if (window.scrollY > 60) setIsOpen(false);
     };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return (
-    <motion.div
-      initial={{opacity:1, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2, ease: "easeInOut" }}
-      className={`w-full h-16 fixed top-0 z-50 flex items-center p-2 transition-all duration-300 ${scrolled ? "bg-black bg-opacity-70 backdrop-blur-md" : "bg-black bg-opacity-50"}`}
-    >
-      <div className="w-full flex items-center justify-between md:justify-center">
-        {/* Mobile View: Hamburger Button and Logo */}
-        <div className="flex items-center justify-between w-full md:hidden">
-          <button
-            onClick={handleToggle}
-            className="text-white text-2xl focus:outline-none mr-auto z-40"
-          >
-            {isOpen ? <HiX /> : <HiMenu />}
-          </button>
-        </div>
+  // Animation variants for desktop links
+  const linkHover = {
+    scale: 1.1,
+    color: "#00ffae",
+    textShadow: "0 0 10px #00ffae",
+    transition: { duration: 0.3, ease: "easeInOut" }
+  };
 
-        {/* Desktop View: Navigation Links */}
-        <div className="hidden md:flex items-center space-x-8">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
-               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
-            }
+  // Animation variants for mobile menu
+  const menuVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: { staggerChildren: 0.1, when: "beforeChildren" }
+    },
+    closed: {
+      y: "-100vh",
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
+  };
+
+  const menuItemVariants = {
+    open: { y: 0, opacity: 1, transition: { duration: 0.3 } },
+    closed: { y: 20, opacity: 0, transition: { duration: 0.2 } }
+  };
+
+  return (
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className={`fixed w-full z-50 top-0 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-md transition-colors duration-500 ${
+        scrolled ? "bg-black bg-opacity-80 shadow-lg" : "bg-black bg-opacity-50"
+      }`}
+    >
+      {/* Logo Area */}
+      <motion.div
+        className="text-2xl sm:text-3xl font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#00ffae] via-white to-[#08f8ff]"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        BYTE
+      </motion.div>
+
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex space-x-10 items-center">
+        {links.map(({ name, path }) => (
+          <motion.li
+            key={path}
+            whileHover={linkHover}
+            className="relative cursor-pointer"
           >
-            Home
-          </NavLink>
-          <NavLink
-            to="/achievements"
-            className={({ isActive }) =>
-              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
-               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
-            }
-          >
-            Achievements
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
-               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
-            }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
-               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
-            }
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/tasks"
-            className={({ isActive }) =>
-              `text-white ${isActive ? "border-b-2 border-white" : ""} border-b-2 border-transparent
-               hover:border-b-2 hover:border-white transition-all duration-300 text-lg font-medium`
-            }
-          >
-            Tasks
-          </NavLink>
-          <NavLink
-            to="/blog"
-            className={({ isActive }) =>
-              `relative text-white text-lg font-medium px-4 py-2 rounded-md ${isActive ? "border-b-2 border-green-500" : ""
-              } group glow-effect`
-            }
-          >
-            Blog
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-          </NavLink>
-        </div>
-      </div>
+            <NavLink
+              to={path}
+              className={({ isActive }) =>
+                `text-white font-medium text-lg relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-cyan-400 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 ${
+                  isActive
+                    ? "after:scale-x-100 text-cyan-300"
+                    : "hover:after:scale-x-100"
+                }`
+              }
+            >
+              {name}
+            </NavLink>
+          </motion.li>
+        ))}
+      </ul>
+
+      {/* Mobile Menu Button */}
+      <button
+        onClick={toggleMenu}
+        aria-label="Toggle Menu"
+        aria-expanded={isOpen}
+        className="text-white md:hidden z-50 focus:outline-none"
+      >
+        {isOpen ? (
+          <HiX size={32} className="text-[#00ffae] hover:text-cyan-400 transition" />
+        ) : (
+          <HiMenu size={32} className="text-[#00ffae] hover:text-cyan-400 transition" />
+        )}
+      </button>
 
       {/* Mobile Menu */}
-      <div
-        className={`h-screen inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center md:hidden transition-transform duration-300 ${isOpen
-            ? "translate-y-0 bg-opacity-100 backdrop-blur-md"
-            : "-translate-y-full"
-          }`}
-      >
-        <NavLink
-          to="/"
-          className="text-white text-lg py-2"
-          onClick={handleToggle}
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/achievements"
-          className="text-white text-lg py-2"
-          onClick={handleToggle}
-        >
-          Achievements
-        </NavLink>
-        <NavLink
-          to="/projects"
-          className="text-white text-lg py-2"
-          onClick={handleToggle}
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          to="/about"
-          className="text-white text-lg py-2"
-          onClick={handleToggle}
-        >
-          About Us
-        </NavLink>
-        <NavLink
-          to="/tasks"
-          className="text-white text-lg py-2"
-          onClick={handleToggle}
-        >
-          Tasks
-        </NavLink>
-        <NavLink
-          to="/blog"
-          className="text-white text-lg py-2"
-          onClick={handleToggle}
-        >
-          Blog
-        </NavLink>
-      </div>
-    </motion.div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            className="absolute top-full left-0 w-full bg-black bg-opacity-95 backdrop-blur-md flex flex-col items-center py-12 space-y-8 md:hidden"
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+          >
+            {links.map(({ name, path }) => (
+              <motion.li
+                key={path}
+                className="text-white text-2xl font-semibold cursor-pointer"
+                variants={menuItemVariants}
+                onClick={() => setIsOpen(false)}
+              >
+                <NavLink
+                  to={path}
+                  className="hover:text-[#00ffae] transition-colors duration-300"
+                >
+                  {name}
+                </NavLink>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
 
 export default NavBar;
-

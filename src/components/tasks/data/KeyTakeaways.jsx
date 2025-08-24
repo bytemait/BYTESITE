@@ -2,34 +2,41 @@ import React from "react";
 import { FaTasks } from "react-icons/fa";
 
 const KeyTakeaways = () => (
-    <div className="bg-gray-900 text-white px-8 py-12 rounded-lg shadow-md">
-        <h2 className="text-4xl font-bold text-green-400 mb-6">Key Takeaways</h2>
-        <p className="text-lg mb-6">
-            These tasks aim to challenge your development skills across various aspects of web, app and backend development.
-            Make sure to deliver a consistent and bug-free experience, ensuring that all features work seamlessly and scale well.
-        </p>
-        <p className="text-lg mb-6">
-            The tasks should follow best practices in terms of <span className="text-green-400">security</span>,
-            <span className="text-green-400">performance</span> and <span className="text-green-400">user experience</span>.
-        </p>
-        <div className="bg-green-800 p-4 rounded-lg text-white mb-6">
-            <h3 className="text-2xl font-semibold mb-2">Good Luck!</h3>
-            <p className="text-lg">
-                We look forward to seeing your implementations! Please note that the implementation effort will be considered,
-                along with your ability to learn and adapt within your tech stack.
-                <span className="block mt-2 text-green-300">
-                    Try making and pushing something for submission, even if it is incomplete.
-                </span>
-            </p>
-        </div>
-        <a target="_blank"
-             href="https://forms.gle/QsXxKEV2gi2pg8yF7"
-            className="flex !flex-row items-center bg-green-500 text-black px-4 py-2 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-green-400 w-[190px] mb-3 m-auto"
-        >
-            <FaTasks className="mr-2" />
-            Submission link
-        </a>
+  <div className="relative mx-auto max-w-4xl p-8 rounded-3xl bg-black bg-opacity-40 backdrop-blur-md border border-[#00ffaeaa] shadow-neon-green text-white">
+    <h2 className="text-4xl font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#00ffae] via-white to-[#08f8ff] mb-6 tracking-wide underline decoration-[#00ffae99] decoration-4 underline-offset-8">
+      Key Takeaways
+    </h2>
+
+    <div className="space-y-6 text-lg leading-relaxed">
+      <p>
+        These tasks challenge your skills across web, app, and backend development. Ensure your work delivers a <span className="font-semibold text-[#00ffae]">consistent</span> and <span className="font-semibold text-[#00ffae]">bug-free</span> experience that <span className="font-semibold text-[#00ffae]">scales well</span>.
+      </p>
+      <p>
+        Follow <span className="font-semibold text-[#00ffae]">best practices</span> related to <span className="text-green-400">security</span>, <span className="text-green-400">performance</span>, and <span className="text-green-400">user experience</span>.
+      </p>
     </div>
+
+    <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-[#00ffae55] via-transparent to-[#00ffae55] border border-[#00ffaeaa] shadow-glow-green animate-pulse">
+      <h3 className="text-2xl font-bold mb-3 text-[#00ffae]">Good Luck!</h3>
+      <p className="text-base text-gray-300 max-w-xl">
+        We are excited to see your implementations! Your effort, learning attitude, and adaptability within your tech stack will be valued.
+        <br />
+        <span className="text-green-300 block mt-2 font-semibold">
+          Submit your work, even if incomplete — progress is what matters!
+        </span>
+      </p>
+    </div>
+
+    <a 
+      href="https://forms.gle/QsXxKEV2gi2pg8yF7" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="mt-10 inline-flex items-center justify-center gap-3 bg-[#00ffae] text-black rounded-xl px-6 py-3 font-semibold text-lg shadow-neon-green transition-transform transform hover:scale-105 hover:brightness-110 mx-auto"
+    >
+      <FaTasks className="text-xl" />
+      Submission Link
+    </a>
+  </div>
 );
 
 export default KeyTakeaways;
