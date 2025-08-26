@@ -15,6 +15,8 @@ import TasksPage from "./components/tasks/ui/TasksPage";
 import { UserContextProvider } from "./pages/Blog/UserContext";
 import blogRoutes from "./pages/Blog/blogRoutes";
 import BlogPage from "./pages/BlogPage";
+import TaskForm from "./components/tasks/ui/TaskForm";
+import ComingSoon from "./components/tasks/ComingSoon";
 
 function App() {
 	return (
@@ -24,11 +26,12 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<Aboutus />} />
-					<Route path="/tasks" element={<TasksPage />} />
+					<Route path="/tasks" element={<ComingSoon />} />
 					<Route
 						path="/tasks/:domain"
 						element={<MultipurposeTasksPage />}
 					/>
+					{/* <Route path="/tasks/submission" element={<TaskForm />} /> */}
 					<Route path="/achievements" element={<Achievements />} />
 					<Route path="/projects" element={<Projects />} />
 					{/* Routes for blog */}
