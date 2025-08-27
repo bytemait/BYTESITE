@@ -349,3 +349,8 @@ p, span, a {
     opacity: 1;
   }
 }
+
+
+.drop-shadow-neon {
+  filter: drop-shadow(0 0 5px #00ffaeaa) drop-shadow(0 0 15px #00ffae55);
+}

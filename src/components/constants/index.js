@@ -1,8 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -34,141 +30,44 @@ export const navLinks = [
   },
 ];
 
-const services = [
+// const maleImage = "https://i.pinimg.com/736x/e8/0a/22/e80a22544de41b6e937c55a8ab4b6405.jpg";  
+// const femaleImage = "https://img.freepik.com/premium-photo/female-developer-background_665280-9660.jpg";  
+
+const team = [
+  { name: "Ashish Negi", title: "President", img: "src/assets/team/ashish_negi.png", group: "Leadership" },
+  { name: "Arnav Chopra", title: "President", img: "src/assets/team/arnav_chopra.png", group: "Leadership" },
+  { name: "Vipul Kohli", title: "Vice President", img: "src/assets/team/vipul_kohli.png", group: "Leadership" },
+  { name: "Pratham Gupta", title: "Vice President", img: "src/assets/team/pratham_gupta.png", group: "Leadership" },
+  { name: "Sukaran Gulati", title: "Vice President", img: "src/assets/team/sukaran_gulati.png", group: "Leadership" },
+  { name: "Divyansh Kalra", title: "GenSec", img: "src/assets/team/divyansh_kalra.png", group: "Operations" },
+  { name: "Anagh Miglani", title: "GenSec", img: "src/assets/team/anagh_miglani.png", group: "Operations" },
+  { name: "Vansh", title: "Mechatronics Coord.", img: "src/assets/team/vansh.png", group: "Mechatronics" },
+  { name: "Swayam Bansal", title: "Mechatronics Coord.", img: "src/assets/team/image.png", group: "Mechatronics" },
+  { name: "Shrey Garg", title: "Creative Coord.", img: "src/assets/team/shrey_garg.png", group: "Creative" },
+  { name: "Janhvi Pareek", title: "Creative Coord.", img: "src/assets/team/janhvi_pareek.png", group: "Creative" },
+  { name: "Dishant Pandey", title: "Outreach Coord.", img: "src/assets/team/dishant_pandey.png", group: "Creative" },
+  { name: "Krish Malik", title: "Dev Coord.", img: "src/assets/team/krish_malik.png", group: "Development" },
+  { name: "Manan Wadhwa", title: "Dev Coord.", img: "src/assets/team/manan_wadhwa.png", group: "Development" },
+  { name: "Arpan Taneja", title: "Dev Coord.", img: "src/assets/team/arpan_taneja.png", group: "Development" },
+  { name: "Kush Aheer", title: "Dev Coord.", img: "src/assets/team/kush_aheer.png", group: "Development" },
+];
+
+// Vision data
+const visions = [
   {
-    title: "Web Dev Team",
-    icon: web,
+    title: "Our Vision",
+    subtitle: "Your Problems, Our Solutions",
+    description:
+      "At BYTE, we believe in the power of collaboration and the boundless potential of technology to shape our world. Through hands-on projects, workshops, and discussions, we cultivate a vibrant community where creativity knows no bounds.",
   },
   {
-    title: "AI/ML Team",
-    icon: mobile,
-  },
-  {
-    title: "IOT Team",
-    icon: backend,
-  },
-  {
-    title: "Design Team",
-    icon: creator,
+    title: "What We Do?",
+    subtitle: "Innovation at BYTE",
+    description:
+      "At BYTE, we innovate, create, and collaborate. From developing cutting-edge projects in IoT, web, app and machine learning to hosting workshops, hackathons, and forging industry connections, we're a community dedicated to exploring the limitless possibilities of technology and turning ideas into reality.",
   },
 ];
 
-const maleImage = "https://i.pinimg.com/736x/e8/0a/22/e80a22544de41b6e937c55a8ab4b6405.jpg";  
-const femaleImage = "https://img.freepik.com/premium-photo/female-developer-background_665280-9660.jpg";  
-
-const teamMembers = {
-  "Web Dev Team": [
-    {
-      name: "Ishaan Minocha",
-      role: "Full Stack Developer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Adisht Jaglan",
-      role: "Back-end Developer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Aman",
-      role: "Full-stack Developer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Abir Thakur",
-      role: "UI/UX Designer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-  ],
-  "AI/ML Team": [
-    {
-      name: "Shivam Gupta",
-      role: "Machine Learning",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Nalin Khanna",
-      role: "Machine Learning",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Ujjwal ",
-      role: "ML Engineer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },  
-    {
-      name: "Chayan Mann ",
-      role: "ML Engineer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },  
-  ],
-  "IOT Team": [
-    {
-      name: "Tanush Parwar",
-      role: "IOT",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Shivam Kumar Jha",
-      role: "IOT",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Ashish Negi",
-      role: "IOT",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Subhashish Panda",
-      role: "IoT Analyst",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-  ],
-  "Design Team": [
-    {
-      name: "Khushi Minda",
-      role: "UI Designer",
-      image: "https://via.placeholder.com/150",
-      gender: "female",
-    },
-    
-    {
-      name: "Anisha Dua",
-      role: "UX Researcher",
-      image: "https://via.placeholder.com/150",
-      gender: "female",
-    },
-    {
-      name: "Ansh Kapila",
-      role: "Graphic Designer",
-      image: "https://via.placeholder.com/150",
-      gender: "male",
-    },
-    {
-      name: "Swasti",
-      role: "Motion Designer",
-      image: "https://via.placeholder.com/150",
-      gender: "female",
-    },
-  ],
-};
-
-Object.keys(teamMembers).forEach((team) => {
-  teamMembers[team].forEach((member) => {
-    member.image = member.gender === "male" ? maleImage : femaleImage;
-  });
-});
 
 const technologies = [
   {
@@ -224,6 +123,8 @@ const technologies = [
     icon: docker,
   },
 ];
+
+
 const experiences = [
   {
     title: "1st Place - Women Innovathon 2024",
@@ -334,4 +235,4 @@ const experiences = [
 ];
 
 
-export { services, teamMembers, technologies,  experiences};
+export { technologies, visions,  experiences, team};
