@@ -34,22 +34,104 @@ export const navLinks = [
 // const femaleImage = "https://img.freepik.com/premium-photo/female-developer-background_665280-9660.jpg";  
 
 const team = [
-  { name: "Ashish Negi", title: "President", img: "src/assets/team/ashish_negi.png", group: "Leadership" },
-  { name: "Arnav Chopra", title: "President", img: "src/assets/team/arnav_chopra.png", group: "Leadership" },
-  { name: "Vipul Kohli", title: "Vice President", img: "src/assets/team/vipul_kohli.png", group: "Leadership" },
-  { name: "Pratham Gupta", title: "Vice President", img: "src/assets/team/pratham_gupta.png", group: "Leadership" },
-  { name: "Sukaran Gulati", title: "Vice President", img: "src/assets/team/sukaran_gulati.png", group: "Leadership" },
-  { name: "Divyansh Kalra", title: "GenSec", img: "src/assets/team/divyansh_kalra.png", group: "Operations" },
-  { name: "Anagh Miglani", title: "GenSec", img: "src/assets/team/anagh_miglani.png", group: "Operations" },
-  { name: "Vansh", title: "Mechatronics Coord.", img: "src/assets/team/vansh.png", group: "Mechatronics" },
-  { name: "Swayam Bansal", title: "Mechatronics Coord.", img: "src/assets/team/image.png", group: "Mechatronics" },
-  { name: "Shrey Garg", title: "Creative Coord.", img: "src/assets/team/shrey_garg.png", group: "Creative" },
-  { name: "Janhvi Pareek", title: "Creative Coord.", img: "src/assets/team/janhvi_pareek.png", group: "Creative" },
-  { name: "Dishant Pandey", title: "Outreach Coord.", img: "src/assets/team/dishant_pandey.png", group: "Creative" },
-  { name: "Krish Malik", title: "Dev Coord.", img: "src/assets/team/krish_malik.png", group: "Development" },
-  { name: "Manan Wadhwa", title: "Dev Coord.", img: "src/assets/team/manan_wadhwa.png", group: "Development" },
-  { name: "Arpan Taneja", title: "Dev Coord.", img: "src/assets/team/arpan_taneja.png", group: "Development" },
-  { name: "Kush Aheer", title: "Dev Coord.", img: "src/assets/team/kush_aheer.png", group: "Development" },
+  { 
+    name: "Ashish Negi", 
+    title: "President", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/ashish_negi_b5hw4b.png", 
+    group: "Leadership" 
+  
+  },
+  { 
+    name: "Arnav Chopra", 
+    title: "President", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/arnav_chopra_tar8of.png", 
+    group: "Leadership" 
+  },
+  { 
+    name: "Vipul Kohli", 
+    title: "Vice President", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/vipul_kohli_cj4rux.png", 
+    group: "Leadership" 
+  },
+  { 
+    name: "Pratham Gupta", 
+    title: "Vice President", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299630/pratham_gupta_e5zjc8.png", 
+    group: "Leadership" 
+  },
+  { 
+    name: "Sukaran Gulati", 
+    title: "Vice President", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/sukaran_gulati_kx8kta.png", 
+    group: "Leadership" 
+  },
+  { 
+    name: "Divyansh Kalra", 
+    title: "GenSec", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/divyansh_kalra_nh2d1t.png", 
+    group: "Operations" 
+  },
+  { 
+    name: "Anagh Miglani", 
+    title: "GenSec", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/anagh_miglani_wujjwr.png", 
+    group: "Operations" 
+  },
+  { 
+    name: "Vansh", 
+    title: "Mechatronics Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/vansh_nfxtps.png", 
+    group: "Mechatronics" 
+  },
+  { 
+    name: "Swayam Bansal", 
+    title: "Mechatronics Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/image_y5a8uk.png", 
+    group: "Mechatronics" 
+  },
+  { 
+    name: "Shrey Garg", 
+    title: "Creative Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/shrey_garg_qbjlch.png", 
+    group: "Creative" 
+  },
+  { 
+    name: "Janhvi Pareek", 
+    title: "Creative Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/janhvi_pareek_a3byof.png", 
+    group: "Creative" 
+  },
+  { 
+    name: "Dishant Pandey", 
+    title: "Outreach Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/dishant_pandey_nrwxaw.png", 
+    group: "Creative" 
+  },
+  { 
+
+    name: "Krish Malik", 
+    title: "Dev Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/krish_malik_v1i4nl.png", 
+    group: "Development" 
+  },
+  { 
+    name: "Manan Wadhwa", 
+    title: "Dev Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/manan_wadhwa_kgidsn.png", 
+    group: "Development" 
+  },
+  { 
+    name: "Arpan Taneja", 
+    title: "Dev Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/arpan_taneja_sbqsmy.png", 
+    group: "Development" 
+  },
+  { 
+    name: "Kush Aheer", 
+    title: "Dev Coord.", 
+    img: "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/kush_aheer_j40v6w.png", 
+    group: "Development" 
+  },
 ];
 
 // Vision data
