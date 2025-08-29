@@ -67,6 +67,59 @@ p, span, a {
   padding: 1rem;
 }
 
+/* Spline Canvas Responsive Styles */
+.spline-container {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+
+.spline-container canvas {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain;
+}
+
+/* Mobile Spline */
+@media (max-width: 639px) {
+  .spline-mobile canvas {
+    width: 75px !important;
+    height: 75px !important;
+  }
+}
+
+/* Tablet Spline */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .spline-tablet canvas {
+    width: 280px !important;
+    height: 280px !important;
+  }
+}
+
+/* Desktop Spline */
+@media (min-width: 1024px) {
+  .spline-desktop canvas {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+/* Force override for Spline component */
+.spline-override {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.spline-override canvas {
+  width: inherit !important;
+  height: inherit !important;
+  max-width: inherit !important;
+  max-height: inherit !important;
+}
+
 .card {
   background-color: #ffffff;
   border-radius: 0.75rem;

@@ -57,12 +57,12 @@ const ExperienceCard = ({ experience }) => {
 
 function Achievements() {
   return (
-    <div className='bg-[#000319] w-full p-8'>
+    <div className='bg-[#000319] w-full'>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           What we have achieved so far
         </p>
-        <h2 className="text-center text-[#4afaab] mt-2 text-5xl">
+        <h2 className="text-center text-[#4afaab] text-5xl">
           BYTE ACHIEVEMENTS
         </h2>
       </motion.div>

@@ -35,11 +35,11 @@ function App() {
 					<Route path="/achievements" element={<Achievements />} />
 					<Route path="/projects" element={<Projects />} />
 					{/* Routes for blog */}
-					<Route path="/blog">
+					{/* <Route path="/blog">
 						{blogRoutes.map(({ path, element }) => (
 							<Route key={path} path={path} element={element} />
 						))}
-					</Route>
+					</Route> */}
 					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>
 				<Footer />

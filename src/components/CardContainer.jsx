@@ -128,7 +128,7 @@ const textOpacity2 = useTransform(
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                Check Out Tasks for 2024
+                Check Out Tasks for 2025
               </motion.a>
             </div>
           </motion.div>
