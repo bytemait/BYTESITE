@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // Enhanced Particle Background with Matrix-style effect
 const ParticleBG = () => (
   <div className="fixed inset-0 -z-10 pointer-events-none select-none overflow-hidden">
-    <svg width="100%" height="100%" className="opacity-30">
+    <svg width="100%" height="100%" className="opacity-20 sm:opacity-30">
       {/* Floating particles */}
       {[...Array(20)].map((_, i) => (
         <circle 
@@ -58,7 +58,7 @@ const ParticleBG = () => (
     </svg>
     
     {/* Grid overlay */}
-    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,174,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,174,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,174,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,174,0.02)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:60px_60px]"></div>
   </div>
 );
 
@@ -68,7 +68,7 @@ const FloatingShapes = () => (
     {[...Array(6)].map((_, i) => (
       <motion.div
         key={i}
-        className="absolute opacity-10"
+        className="absolute opacity-5 sm:opacity-10"
         style={{
           left: `${Math.random() * 100}%`,
           top: `${Math.random() * 100}%`,
@@ -85,7 +85,7 @@ const FloatingShapes = () => (
         }}
       >
         <div 
-          className="w-16 h-16 border-2 border-[#00ffae] rounded-lg"
+          className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-2 border-[#00ffae] rounded-lg"
           style={{
             transform: `rotate(${Math.random() * 45}deg)`,
           }}
@@ -97,24 +97,24 @@ const FloatingShapes = () => (
 
 const ComingSoon = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#001a0d] flex items-center justify-center px-8 py-12 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#001a0d] flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-12 overflow-hidden">
       <ParticleBG />
       <FloatingShapes />
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <div className="relative z-10 text-center max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto">
         {/* Animated rocket icon */}
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-6 sm:mb-8"
         >
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="inline-block"
           >
-            <FaRocket className="text-6xl text-[#00ffae] drop-shadow-[0_0_20px_#00ffae]" />
+            <FaRocket className="text-4xl sm:text-5xl md:text-6xl text-[#00ffae] drop-shadow-[0_0_20px_#00ffae]" />
           </motion.div>
         </motion.div>
 
@@ -123,7 +123,7 @@ const ComingSoon = () => {
           initial={{ scale: 0.8, opacity: 0, y: 30 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3, type: "spring", bounce: 0.4 }}
-          className="text-7xl md:text-8xl font-extrabold mb-8 relative"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 sm:mb-8 relative leading-tight"
           style={{
             background: "linear-gradient(45deg, #00ffae, #08f8ff, #00ffae)",
             backgroundSize: "200% 200%",
@@ -139,10 +139,10 @@ const ComingSoon = () => {
 
         {/* Pulsing glow effect around text */}
         <motion.div
-          className="absolute inset-0 rounded-full blur-3xl opacity-20 bg-[#00ffae]"
+          className="absolute inset-0 rounded-full blur-2xl sm:blur-3xl opacity-10 sm:opacity-20 bg-[#00ffae]"
           animate={{ 
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2] 
+            opacity: [0.1, 0.3, 0.1] 
           }}
           transition={{ 
             duration: 3, 
@@ -156,11 +156,12 @@ const ComingSoon = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-xl md:text-2xl mb-12 text-gray-200 max-w-2xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 md:mb-12 text-gray-200 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed px-2"
         >
           We're crafting something{" "}
           <span className="text-[#00ffae] font-semibold">extraordinary</span>.
-          <br />
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
           Meanwhile, stay connected with BYTE's journey!
         </motion.p>
 
@@ -170,7 +171,7 @@ const ComingSoon = () => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
           whileHover={{ 
-            scale: 1.1, 
+            scale: 1.05,
             boxShadow: "0 0 25px #00ffae88",
           }}
           whileTap={{ scale: 0.95 }}
@@ -180,10 +181,10 @@ const ComingSoon = () => {
             href="https://www.instagram.com/byte__official/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-gradient-to-r from-[#00ffae] to-[#08f8ff] text-black px-8 py-4 rounded-2xl font-bold text-lg shadow-xl transition-all duration-300 hover:brightness-110"
+            className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-[#00ffae] to-[#08f8ff] text-black px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg shadow-xl transition-all duration-300 hover:brightness-110"
           >
-            <FaInstagram className="text-2xl" />
-            Follow BYTE on Instagram
+            <FaInstagram className="text-lg sm:text-xl md:text-2xl flex-shrink-0" />
+            <span className="whitespace-nowrap">Follow BYTE on Instagram</span>
           </a>
         </motion.div>
 
@@ -192,12 +193,12 @@ const ComingSoon = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="flex justify-center space-x-2 mt-12"
+          className="flex justify-center space-x-1.5 sm:space-x-2 mt-8 sm:mt-10 md:mt-12"
         >
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-3 h-3 bg-[#00ffae] rounded-full"
+              className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00ffae] rounded-full"
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.7, 1, 0.7]
@@ -216,7 +217,7 @@ const ComingSoon = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="mt-8 text-sm text-gray-400 italic"
+          className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-400 italic px-4"
         >
           "Great things take time... and amazing code!" 💻✨
         </motion.p>
