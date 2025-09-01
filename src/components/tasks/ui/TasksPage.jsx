@@ -6,12 +6,9 @@ const tasks = [
   { id: 1, title: "Web Development", image: "/tasks/webd.jpg", link: "/tasks/webd" },
   { id: 2, title: "App Development", image: "/tasks/appd.jpg", link: "/tasks/appd" },
   { id: 3, title: "Machine Learning", image: "/tasks/ml.jpg", link: "/tasks/ml" },
-  { id: 4, title: "Cyber Security", image: "/tasks/cybersec.jpg", link: "/tasks/cybersec" },
-  { id: 5, title: "IOT", image: "/tasks/iot.jpg", link: "/tasks/iot" },
-  { id: 6, title: "CAD", image: "/tasks/cad.jpg", link: "/tasks/cad" },
-  { id: 7, title: "UI-UX", image: "/tasks/ux.jpg", link: "/tasks/uiux" },
-  { id: 8, title: "Video Editing", image: "/tasks/video.jpg", link: "/tasks/video" },
-  { id: 9, title: "DevOps", image: "/tasks/devops.jpg", link: "/tasks/devops" },
+  { id: 4, title: "Mechatronics", image: "/tasks/iot.jpg", link: "/tasks/mechatronics"},
+  { id: 5, title: "Creative Outreach", image: "/tasks/video.jpg", link: "/tasks/creative-outreach"},
+  { id: 6, title: "CyberSecurity", image: "/tasks/cybersec.jpg", link: "/tasks/cybersecurity"}
 ];
 
 function ParticleBG() {

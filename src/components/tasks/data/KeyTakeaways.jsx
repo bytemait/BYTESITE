@@ -28,7 +28,7 @@ const KeyTakeaways = () => (
     </div>
 
     <a 
-      href="https://forms.gle/QsXxKEV2gi2pg8yF7" 
+      href="https://forms.gle/Hayqudib1TJ9rnxQA" 
       target="_blank" 
       rel="noopener noreferrer"
       className="mt-10 inline-flex items-center justify-center gap-3 bg-[#00ffae] text-black rounded-xl px-6 py-3 font-semibold text-lg shadow-neon-green transition-transform transform hover:scale-105 hover:brightness-110 mx-auto"

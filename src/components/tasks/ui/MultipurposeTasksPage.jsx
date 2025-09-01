@@ -3,16 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Link, useParams, useNavigate } 
 import { Sidebar, Code, Smartphone } from 'lucide-react';
 import WebDevTasks from '../data/WebDevTasks';
 import AppDevTasks from '../data/AppDevTasks';
-import CybersecTasks from '../data/CybersecTasks';
 import MlTasks from '../data/MlTasks';
-import IotTasks from '../data/IotTasks';
+import MechatronicsTasks from '../data/MechatronicsTasks';
+import CreativeOutreachTasks from '../data/CreativeOutreachTasks';
+import CybersecTasks from '../data/CybersecTasks'
 import ComingSoon from '../ComingSoon';
 import { FaTasks } from 'react-icons/fa';
 import KeyTakeaways from '../data/KeyTakeaways';
-import CADTasks from '../data/CADTask';
-import DevOps from '../data/DevOps';
-import UiUx from '../data/UiUx';
-import VideoTask from '../data/Video';
 
 // Custom Sidebar Component
 const CustomSidebar = ({ isOpen, toggleSidebar }) => (
@@ -21,13 +18,10 @@ const CustomSidebar = ({ isOpen, toggleSidebar }) => (
         <ul className="space-y-2">
             <li><Link to="/tasks/webd" className="text-white hover:text-green-400">Web Development</Link></li>
             <li><Link to="/tasks/appd" className="text-white hover:text-green-400">App Development</Link></li>
-            <li><Link to="/tasks/iot" className="text-white hover:text-green-400">Iot(Internet Of Things)</Link></li>
             <li><Link to="/tasks/ml" className="text-white hover:text-green-400">Machine Learning</Link></li>
-            <li><Link to="/tasks/cybersec" className="text-white hover:text-green-400">Cyber Security</Link></li>
-            <li><Link to="/tasks/cad" className="text-white hover:text-green-400">CAD</Link></li>
-            <li><Link to="/tasks/devops" className="text-white hover:text-green-400">Devops</Link></li>
-            <li><Link to="/tasks/uiux" className="text-white hover:text-green-400">UI-UX</Link></li>
-            <li><Link to="/tasks/video" className="text-white hover:text-green-400">Video Editing</Link></li>
+            <li><link to="/tasks/mechatronics" className="text-white hover:text-green-400" />Mechatronics</li>
+            <li><link to="/tasks/creative-outreach" className="text-white hover:text-green-400" />Creative & Outreach</li>
+            <li><link to="/tasks/cybersecurity" className="text-white hover:text-green-400" />CyberSecurity</li>
         </ul>
     </div>
 );
@@ -61,31 +55,19 @@ const MultipurposeTasksPage = () => {
 
     const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
-    const getTitle = () => {
-        switch (domain) {
-            case 'webd': return 'Web Development Tasks';
-            case 'appd': return 'App Development Tasks';
-            default: return 'Tasks';
-        }
-    };
-
     return (
         <div className="flex bg-black text-white mt-16">
 
             <CustomSidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
             <div className={`flex-1 flex flex-col transition-all duration-300 ${sidebarOpen ? 'ml-64' : 'ml-0'}`}>
                 <div className="flex-1 flex flex-col">
-                    <CustomHeader title={getTitle()} toggleSidebar={toggleSidebar} />
                     <div className="flex-1 overflow-auto">
                         {domain === 'webd' && <WebDevTasks />}
                         {domain === 'appd' && <AppDevTasks />}
-                        {domain === 'iot' && <IotTasks />}
                         {domain === 'ml' && <MlTasks />}
-                        {domain === 'cybersec' && <CybersecTasks />}
-                        {domain === 'cad' && <CADTasks />}
-                        {domain === 'devops' && <DevOps />}
-                        {domain === 'uiux' && <UiUx />}
-                        {domain === 'video' && <VideoTask />}
+                        {domain === 'mechatronics' && <MechatronicsTasks />}
+                        {domain === 'creative-outreach' && <CreativeOutreachTasks />}
+                        {domain === 'cybersecurity' && <CybersecTasks />}
                     </div>
                 </div>
                 <div className='w-[90%] m-auto'>

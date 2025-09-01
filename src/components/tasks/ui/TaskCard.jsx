@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaCode, FaMobileAlt, FaRobot, FaLock, FaMicrochip, FaDraftingCompass, FaPalette, FaVideo, FaCloud } from "react-icons/fa";
+import { FaCode, FaMobileAlt, FaPalette, FaRobot, FaCog, FaCloud, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 // Map domain to icons for more fun!
@@ -7,12 +7,9 @@ const ICONS = {
   "Web Development": FaCode,
   "App Development": FaMobileAlt,
   "Machine Learning": FaRobot,
-  "Cyber Security": FaLock,
-  "IOT": FaMicrochip,
-  "CAD": FaDraftingCompass,
-  "UI-UX": FaPalette,
-  "Video Editing": FaVideo,
-  "DevOps": FaCloud,
+  "Mechatronics": FaCog,
+  "Creative Outreach": FaPalette,
+  "CyberSecurity": FaLock
 };
 
 export default function TaskCard({ title, image, link }) {

@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { FaBrain, FaCheckCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaPalette, FaCheckCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { MLTasks as tasks } from "../../../../tasks-2025";
+import { CreativeOutreachTasks as tasks } from "../../../../tasks-2025";
 import ParticleBG from "../ui/ParticleBG.jsx";
 
+// ✨ Animated code snippet component (for case study example)
+const CodeSnippet = ({ code }) => {
+  return (
+    <pre className="bg-gray-900 bg-opacity-80 text-[#ff6b6b] p-4 rounded-xl font-mono max-h-72 overflow-auto border border-[#ff6b6baa] shadow-glow whitespace-pre-wrap break-words">
+      {code}
+    </pre>
+  );
+};
 
 const TaskCard = ({
   taskNumber,
@@ -13,19 +21,22 @@ const TaskCard = ({
   difficulty,
   time,
   technologies,
-  steps,
+  guidelines,
+  requirements,
+  deliverable,
+  evaluation,
   resources,
-  codeExample,
+  caseStudy,
+  tasks,
   extras,
-  datasetInfo,
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [completed, setCompleted] = useState(false);
 
   const difficultyColors = {
-    basic: "bg-green-600",
+    creative: "bg-purple-600",
+    intermediate: "bg-yellow-600",
     advanced: "bg-red-600",
-    genai: "bg-purple-600",
   };
 
   return (
@@ -45,7 +56,7 @@ const TaskCard = ({
               {title}
             </h3>
             <div className="flex gap-3 mt-1 text-sm text-gray-300 font-mono items-center">
-              <span className={`px-3 py-1 rounded-full text-white ${difficultyColors[difficulty] || difficultyColors.basic}`}>
+              <span className={`px-3 py-1 rounded-full text-white ${difficultyColors[difficulty] || difficultyColors.creative}`}>
                 {difficulty}
               </span>
               <span className="flex items-center gap-1">⏰ {time}</span>
@@ -68,14 +79,6 @@ const TaskCard = ({
 
       {/* Description */}
       <p className="mt-6 text-white font-light leading-relaxed">{description}</p>
-
-      {/* Dataset Info */}
-      {datasetInfo && (
-        <div className="mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg border-l-4 border-[#00ffae]">
-          <h4 className="text-[#00ffae] font-semibold mb-2">Dataset:</h4>
-          <p className="text-gray-300">{datasetInfo}</p>
-        </div>
-      )}
 
       {/* Tech tags */}
       <div className="mt-6 flex flex-wrap gap-2">
@@ -116,11 +119,47 @@ const TaskCard = ({
             transition={{ duration: 0.4 }}
             className="overflow-hidden text-gray-300 font-mono"
           >
-            {steps && (
+            {guidelines && (
               <section className="mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Steps</h4>
+                <h4 className="text-[#00ffae] font-bold mb-2">Guidelines</h4>
+                <ul className="list-disc pl-5 space-y-2">
+                  {guidelines.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </section>
+            )}
+            {requirements && (
+              <section className="mb-5">
+                <h4 className="text-[#00ffae] font-bold mb-2">Requirements</h4>
+                <ul className="list-disc pl-5 space-y-2">
+                  {requirements.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </section>
+            )}
+            {deliverable && (
+              <section className="mb-5">
+                <h4 className="text-yellow-400 font-bold mb-2">Deliverable</h4>
+                <p className="text-gray-300">{deliverable}</p>
+              </section>
+            )}
+            {evaluation && (
+              <section className="mb-5">
+                <h4 className="text-cyan-400 font-bold mb-2">Evaluation Criteria</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  {evaluation.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </section>
+            )}
+            {caseStudy && (
+              <section className="mb-5">
+                <h4 className="text-red-400 font-bold mb-2">Case Study Example (What NOT to do)</h4>
+                <CodeSnippet code={caseStudy} />
+              </section>
+            )}
+            {tasks && (
+              <section className="mb-5">
+                <h4 className="text-[#00ffae] font-bold mb-2">Your Tasks</h4>
                 <ol className="list-decimal pl-5 space-y-2">
-                  {steps.map((step, i) => <li key={i}>{step}</li>)}
+                  {tasks.map((task, i) => <li key={i}>{task}</li>)}
                 </ol>
               </section>
             )}
@@ -143,12 +182,6 @@ const TaskCard = ({
                 </ul>
               </section>
             )}
-            {codeExample && (
-              <section className="mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Sample Code</h4>
-                <CodeSnippet code={codeExample} />
-              </section>
-            )}
             {extras && (
               <section className="mb-2">
                 {extras}
@@ -161,7 +194,7 @@ const TaskCard = ({
   );
 };
 
-const MlTasks = () => {
+const CreativeOutreachTasks = () => {
   return (
     <div className="relative min-h-screen p-8 md:p-16 text-white">
       <ParticleBG />
@@ -172,11 +205,14 @@ const MlTasks = () => {
         className="mb-12 text-center"
       >
         <h1 className="text-6xl font-extrabold bg-gradient-to-r from-[#00ffae] via-white to-[#08f8ff] bg-clip-text text-transparent">
-          <FaBrain className="inline-block mr-3 text-[#00ffae]" />
-          Machine Learning Tasks
+          <FaPalette className="inline-block mr-3 text-[#00ffae]" />
+          Creative & Outreach Tasks
         </h1>
-        <p className="mt-6 text-xl max-w-3xl mx-auto text-gray-300">
-          Explore the full spectrum of ML: from traditional classification and deep learning to cutting-edge GenAI with RAG systems. Build, train, and deploy intelligent solutions.
+        <p className="mt-6 text-xl max-w-4xl mx-auto text-gray-300">
+          Showcase your creative prowess across <span className="text-purple-400 font-semibold">video editing</span>, 
+          <span className="text-pink-400 font-semibold"> graphic design</span>, and 
+          <span className="text-cyan-400 font-semibold"> professional communication</span>. 
+          Transform raw content into compelling visual stories and persuasive business communications.
         </p>
       </motion.header>
 
@@ -192,10 +228,10 @@ const MlTasks = () => {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="mt-20 text-center text-5xl font-bold text-[#00ffae] animate-pulse"
       >
-        Happy Learning! 🧠
+        Happy Creating! 🎨
       </motion.div>
     </div>
   );
 };
 
-export default MlTasks;
+export default CreativeOutreachTasks;

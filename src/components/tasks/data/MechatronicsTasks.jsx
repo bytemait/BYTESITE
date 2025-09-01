@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FaBrain, FaCheckCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaCog, FaCheckCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { MLTasks as tasks } from "../../../../tasks-2025";
+import { MechatronicsTasks as tasks } from "../../../../tasks-2025";
 import ParticleBG from "../ui/ParticleBG.jsx";
-
 
 const TaskCard = ({
   taskNumber,
@@ -13,19 +12,20 @@ const TaskCard = ({
   difficulty,
   time,
   technologies,
+  requirements,
   steps,
-  resources,
-  codeExample,
-  extras,
-  datasetInfo,
+  outcomes,
+  submission,
+  demo,
+  hints,
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [completed, setCompleted] = useState(false);
 
   const difficultyColors = {
-    basic: "bg-green-600",
+    easy: "bg-green-600",
+    intermediate: "bg-yellow-600",
     advanced: "bg-red-600",
-    genai: "bg-purple-600",
   };
 
   return (
@@ -45,10 +45,10 @@ const TaskCard = ({
               {title}
             </h3>
             <div className="flex gap-3 mt-1 text-sm text-gray-300 font-mono items-center">
-              <span className={`px-3 py-1 rounded-full text-white ${difficultyColors[difficulty] || difficultyColors.basic}`}>
+              <span className={`px-3 py-1 rounded-full text-white ${difficultyColors[difficulty] || difficultyColors.easy}`}>
                 {difficulty}
               </span>
-              <span className="flex items-center gap-1">⏰ {time}</span>
+              {time && <span className="flex items-center gap-1">⏰ {time}</span>}
             </div>
           </div>
         </div>
@@ -68,14 +68,6 @@ const TaskCard = ({
 
       {/* Description */}
       <p className="mt-6 text-white font-light leading-relaxed">{description}</p>
-
-      {/* Dataset Info */}
-      {datasetInfo && (
-        <div className="mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg border-l-4 border-[#00ffae]">
-          <h4 className="text-[#00ffae] font-semibold mb-2">Dataset:</h4>
-          <p className="text-gray-300">{datasetInfo}</p>
-        </div>
-      )}
 
       {/* Tech tags */}
       <div className="mt-6 flex flex-wrap gap-2">
@@ -116,42 +108,57 @@ const TaskCard = ({
             transition={{ duration: 0.4 }}
             className="overflow-hidden text-gray-300 font-mono"
           >
-            {steps && (
+            {requirements && (
               <section className="mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Steps</h4>
-                <ol className="list-decimal pl-5 space-y-2">
-                  {steps.map((step, i) => <li key={i}>{step}</li>)}
-                </ol>
-              </section>
-            )}
-            {resources && (
-              <section className="mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Resources</h4>
-                <ul className="list-disc pl-5 space-y-2">
-                  {resources.map(({ name, url }, idx) => (
-                    <li key={idx}>
-                      <a
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-[#08f8ff] transition-colors"
-                      >
-                        {name}
-                      </a>
-                    </li>
-                  ))}
+                <h4 className="text-[#00ffae] font-bold mb-2">Requirements</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  {requirements.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
               </section>
             )}
-            {codeExample && (
+            {steps && (
               <section className="mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Sample Code</h4>
-                <CodeSnippet code={codeExample} />
+                <h4 className="text-[#00ffae] font-bold mb-2">Steps</h4>
+                <ol className="list-decimal pl-5 space-y-1">
+                  {steps.map((item, i) => <li key={i}>{item}</li>)}
+                </ol>
               </section>
             )}
-            {extras && (
+            {hints && (
+              <section className="mb-5">
+                <h4 className="text-yellow-400 font-bold mb-2">Hints</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  {hints.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </section>
+            )}
+            {outcomes && (
+              <section className="mb-5">
+                <h4 className="text-cyan-400 font-bold mb-2">Expected Learning Outcomes</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  {outcomes.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </section>
+            )}
+            {demo && (
+              <section className="mb-5">
+                <h4 className="text-purple-400 font-bold mb-2">Demo Video</h4>
+                <a 
+                  href={demo} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="underline hover:text-[#08f8ff] transition-colors text-[#00ffae]"
+                >
+                  Watch Demo →
+                </a>
+              </section>
+            )}
+            {submission && (
               <section className="mb-2">
-                {extras}
+                <h4 className="text-orange-400 font-bold mb-2">Submission</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  {submission.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
               </section>
             )}
           </motion.div>
@@ -161,7 +168,7 @@ const TaskCard = ({
   );
 };
 
-const MlTasks = () => {
+const MechatronicsTasks = () => {
   return (
     <div className="relative min-h-screen p-8 md:p-16 text-white">
       <ParticleBG />
@@ -171,13 +178,13 @@ const MlTasks = () => {
         transition={{ duration: 1, type: "spring" }}
         className="mb-12 text-center"
       >
-        <h1 className="text-6xl font-extrabold bg-gradient-to-r from-[#00ffae] via-white to-[#08f8ff] bg-clip-text text-transparent">
-          <FaBrain className="inline-block mr-3 text-[#00ffae]" />
-          Machine Learning Tasks
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#00ffae] via-white to-[#08f8ff] bg-clip-text text-transparent">
+          <FaCog className="inline-block mr-3 text-[#00ffae]" />
+          Mechatronics - IoT & CAD Tasks
         </h1>
-        <p className="mt-6 text-xl max-w-3xl mx-auto text-gray-300">
-          Explore the full spectrum of ML: from traditional classification and deep learning to cutting-edge GenAI with RAG systems. Build, train, and deploy intelligent solutions.
-        </p>
+        <div className="mt-4 p-4 bg-blue-900 bg-opacity-30 rounded-xl border border-blue-500 max-w-2xl mx-auto">
+          <p className="text-blue-200 font-semibold">🌐 Platform: Use Wokwi <a className="text-blue-300" href="https://wokwi.com">https://wokwi.com</a> for all IoT tasks</p>
+        </div>
       </motion.header>
 
       <motion.ul layout className="space-y-16 max-w-4xl mx-auto">
@@ -190,12 +197,26 @@ const MlTasks = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="mt-20 text-center text-5xl font-bold text-[#00ffae] animate-pulse"
+        className="mt-20 text-center space-y-4"
       >
-        Happy Learning! 🧠
+        <div className="text-4xl md:text-5xl font-bold text-[#00ffae] animate-pulse">
+          Happy Coding! 🚀
+        </div>
+        <div className="bg-gray-900 bg-opacity-50 rounded-xl p-6 max-w-md mx-auto">
+          <h3 className="text-xl font-bold text-[#00ffae] mb-2">Need Help?</h3>
+          <p className="text-gray-300 mb-2">Contact for doubts:</p>
+          <p className="text-sm">WhatsApp: <span className="text-cyan-400">9817413427</span></p>
+          <p className="text-sm">Email: <span className="text-cyan-400">swayambansal@outlook.com</span></p>
+          <p className="text-xs text-gray-400 mt-2">Also available on LinkedIn & X</p>
+        </div>
+        
+        <div className="mt-8 p-4 bg-green-900 bg-opacity-30 rounded-xl border border-green-500 max-w-lg mx-auto">
+          <h4 className="text-green-300 font-bold mb-2">📋 Submission Guidelines</h4>
+          <p className="text-sm text-gray-300">Submit 2 separate links to your Wokwi projects</p>
+        </div>
       </motion.div>
     </div>
   );
 };
 
-export default MlTasks;
+export default MechatronicsTasks;
