@@ -40,7 +40,7 @@ export default function Aboutm() {
     <div className="py-16 bg-[#050816] text-white px-6 sm:px-16">
       {/* Vision Section */}
       <motion.div
-        className="max-w-3xl mx-auto bg-gradient-to-br from-green-800/80 via-black to-black/80 p-10 rounded-3xl shadow-2xl text-center backdrop-blur-lg mb-16"
+        className="max-w-3xl mx-auto bg-gradient-to-br from-green-800/80 via-black to-black/80 p-10 rounded-3xl shadow-2xl text-center backdrop-blur-lg mb-16 m-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
