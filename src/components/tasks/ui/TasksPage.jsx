@@ -38,7 +38,7 @@ function TasksPage() {
         initial={{ opacity: 0, y: -60, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1, type: "spring" }}
-        className="text-7xl font-extrabold from-[#00ffae] via-white to-[#08f8ff] bg-gradient-to-r text-transparent bg-clip-text mb-6 drop-shadow"
+        className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold from-[#00ffae] via-white to-[#08f8ff] bg-gradient-to-r text-transparent bg-clip-text mb-4 sm:mb-6 md:mb-8 drop-shadow text-center px-4"
       >
         Recruitment Tasks
       </motion.h1>
