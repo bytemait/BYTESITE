@@ -133,14 +133,15 @@ const MLTasks = [
       difficulty: "basic",
       time: "4-6 hours",
       technologies: [
-        "Python", "Scikit-learn", "Pandas", "TF-IDF", "Logistic Regression"
+        "Python", "Scikit-learn", "Pandas", "TF-IDF", "Classification"
       ],
-      datasetInfo: "A custom planetary dataset will be provided for this task.",
+      datasetInfo: "The Dataset should be split 80/20 and all the major metrics should be evaluated on it.",
       steps: [
         "Load and preprocess the dataset",
         "Extract features from text (e.g., TF-IDF)",
-        "Train classifiers: Logistic Regression, Naive Bayes, Random Forest",
+        "Train classifiers: Use the best Classification Model",
         "Report Accuracy, Precision, Recall, F1 Score for each model"
+
       ]
     },
     {

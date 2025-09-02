@@ -73,7 +73,11 @@ const TaskCard = ({
       {datasetInfo && (
         <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-gray-800 bg-opacity-50 rounded-lg border-l-4 border-[#00ffae]">
           <h4 className="text-[#00ffae] font-semibold mb-2 text-sm sm:text-base">Dataset:</h4>
+          
           <p className="text-gray-300 text-sm sm:text-base">{datasetInfo}</p>
+          <a href={'https://drive.google.com/file/d/1ZcOhB923LeGZPseeomt-iYETqBJdN0iP/view?usp=sharing'} target="_blank" rel="noopener noreferrer" className="underline hover:text-[#08f8ff] transition-colors break-words">
+            Link
+          </a>
         </div>
       )}
 
