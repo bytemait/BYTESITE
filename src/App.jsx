@@ -26,7 +26,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<Aboutus />} />
-					<Route path="/tasks" element={<ComingSoon />} />
+					<Route path="/tasks" element={<TasksPage />} />
 					<Route
 						path="/tasks/:domain"
 						element={<MultipurposeTasksPage />}

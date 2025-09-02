@@ -220,15 +220,15 @@ const WebDevTasks = () => {
 					<TaskCard key={idx} {...task} />
 				))}
 			</motion.ul>
-			<div className="bg-gray-900 bg-opacity-50 rounded-xl p-4 sm:p-6 max-w-xs sm:max-w-md mx-auto">
+			{/* <div className="bg-gray-900 bg-opacity-50 rounded-xl p-4 sm:p-6 max-w-xs sm:max-w-md mx-auto">
 
 				<p className="text-xs text-gray-400 mt-2">
-					✨ Be Creative You may try different approaches to reduce
+					✨ Be Creative<br/> You may try different approaches to reduce
 					complexity. for example, try reducing the LLM's context
 					window by not sending the entire codebase in or process
 					data in parallel? surprise us!
 				</p>
-			</div>
+			</div> */}
 			<motion.div
 				initial={{ opacity: 0, scale: 0.95 }}
 				animate={{ opacity: 1, scale: 1 }}
