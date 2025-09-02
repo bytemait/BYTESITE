@@ -194,12 +194,12 @@ const Home = () => {
 			</div>
 
 			{/* Content Section */}
-			{/* <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-30 px-4 sm:px-6 md:px-8">
+			<div className="">
 				
-				<CardCarousel />
-				 <HeroMid />
+				{/* <CardCarousel /> */}
+				 {/* <HeroMid /> */}
 				<CardContainer />
-			</div> */}
+			</div>
 
 			{/* Projects Section */}
 			<div className="w-full">

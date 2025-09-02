@@ -1,139 +1,84 @@
-import { useScroll, useTransform, motion, easeInOut, delay } from "framer-motion";
-import { useSpring } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const CardContainer = () => {
-  const ref = useRef(null);
-  const textRef1 = useRef(null);
-  const textRef2 = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-const textX1 = useTransform(scrollYProgress, [0.3, 0.6], [-300, 0]);
-const textOpacity1 = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
-
-const textX2 = useTransform(scrollYProgress, [0.3, 0.9], [300, 0]);
-const textOpacity2 = useTransform(
-  scrollYProgress,
-  [0.0, 0.49, 0.5, 0.9],
-  [0, 0, 0, 1]
-);
-
-  const rotate = useTransform(scrollYProgress, [0.6, 0.9], ["0deg", "-15deg"]);
-
   return (
-    <div className="w-full min-h-[180vh] flex justify-center">
-      <div
-        className="sticky top-0 h-screen w-full flex items-center justify-center"
-        style={{ perspective: "1000px" }}
-      >
-        <div
-          ref={ref}
-          className="w-full h-full flex items-center justify-center"
+    <div className="w-full min-h-screen flex justify-center items-center py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="w-full max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ amount: 0.3, once: true }}
+          className="relative bg-gradient-to-br from-black via-gray-900 to-black border-2 border-[#00ffae] rounded-xl sm:rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 text-center shadow-2xl"
+          style={{
+            boxShadow: "0 0 30px rgba(0, 255, 174, 0.3), 0 0 60px rgba(0, 255, 174, 0.1)",
+          }}
         >
-          <motion.div
-            initial={{ opacity: 1, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeInOut", delay: 0.5 }}
-            viewport={{ amount: 0.5, once: true }}
-            style={{
-              rotate,
-              transformOrigin: "center center",
-              border: "2px solid #00ffae",
-              minHeight: "80vh",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              background: "linear-gradient(135deg, #000000, #0a0a0a)",
-              padding: "2rem",
-              borderRadius: "1rem",
-              overflow: "hidden",
-              maxWidth: "1200px",
-              boxShadow: "0 0 20px #00ffae, 0 0 40px #00ffae",
-            }}
-            className="py-16 px-4 md:px-12 lg:px-24 rounded-xl w-full"
-          >
-            <motion.div
-              ref={textRef1}
-              className="text-3xl md:text-5xl lg:text-6xl text-center leading-tight mb-12 font-bold tracking-tight bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
+          {/* Animated background glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00ffae]/5 to-transparent rounded-xl sm:rounded-2xl md:rounded-3xl animate-pulse" />
+          
+          {/* Content */}
+          <div className="relative z-10">
+            {/* Main heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
               style={{
-                opacity: textOpacity1,
-                x: textX1,
-                backgroundSize: "400% 100%",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
+                backgroundSize: "200% 100%",
+                animation: "gradient-shift 3s ease-in-out infinite",
               }}
-              transition={{ ease: easeInOut, duration: 1.5 }}
             >
               Harvesting Insights from
-            </motion.div>
+            </motion.h1>
 
-            <motion.div
-              ref={textRef2}
-              className="text-3xl md:text-5xl lg:text-6xl text-center leading-tight mb-12 font-bold tracking-tight bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16 bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
               style={{
-                x: textX2,
-                opacity: textOpacity2,
-                backgroundSize: "400% 100%",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
+                backgroundSize: "200% 100%",
+                animation: "gradient-shift 3s ease-in-out infinite 1.5s",
               }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              viewport={{ once: true, amount: 0.5 }}
             >
               Diligent Endeavours
-            </motion.div>
+            </motion.h2>
 
-            <div className="flex flex-col items-center gap-6">
-              <motion.a
-                href="https://github.com/bytemait"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black text-white py-3 px-8 border-2 border-green-500 rounded-md text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-green-500"
-                style={{
-                  boxShadow: "0 0 15px rgba(0, 255, 0, 0.6)",
-                }}
-                initial={{ opacity: 0, y: 100, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{
-                  duration: 1.2,
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 20,
-                }}
-                whileHover={{ scale: 1.1 }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                Visit Our GitHub
-              </motion.a>
-
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8">
+            
               <motion.a
                 href="/tasks"
-                className="bg-black text-white py-3 px-8 border-2 border-green-500 rounded-md text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-green-500"
-                style={{
-                  boxShadow: "0 0 15px rgba(0, 255, 0, 0.6)",
-                }}
-                initial={{ opacity: 0, y: 100, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{
-                  duration: 1.2,
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 20,
-                }}
-                whileHover={{ scale: 1.1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                viewport={{ once: true }}
+                className="w-full sm:w-auto bg-gradient-to-r from-[#00ffae] to-[#08f8ff] text-black py-3 sm:py-4 px-6 sm:px-8 md:px-10 rounded-lg md:rounded-xl text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:brightness-110 focus:ring-2 focus:ring-[#00ffae] focus:outline-none shadow-xl"
               >
                 Check Out Tasks for 2025
               </motion.a>
             </div>
-          </motion.div>
-        </div>
+
+            {/* Decorative elements */}
+            <div className="absolute top-4 right-4 w-2 h-2 sm:w-3 sm:h-3 bg-[#00ffae] rounded-full animate-pulse" />
+            <div className="absolute bottom-4 left-4 w-2 h-2 sm:w-3 sm:h-3 bg-[#00ffae] rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+          </div>
+        </motion.div>
       </div>
+
+      {/* CSS for gradient animation */}
+      <style jsx>{`
+        @keyframes gradient-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+      `}</style>
     </div>
   );
 };
