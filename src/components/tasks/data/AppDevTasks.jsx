@@ -1,60 +1,60 @@
 import React, { useEffect, useState } from "react";
 import { FaMobileAlt, FaCheckCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { AppDevTasks as tasks } from "../../../../tasks-2025";
 // Mock data for demonstration
-const tasks = [
-  {
-    taskNumber: 1,
-    title: "Basic Music Player UI",
-    description: "Create a simple music player interface with play/pause controls, progress bar, and song information display.",
-    icon: FaMobileAlt,
-    difficulty: "beginner",
-    time: "2-3 hours",
-    technologies: ["React", "CSS", "HTML5 Audio"],
-    requirements: [
-      "Create play/pause button functionality",
-      "Implement progress bar with seek capability",
-      "Display current song title and artist",
-      "Add volume control slider"
-    ],
-    resources: [
-      { name: "HTML5 Audio API", url: "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement" },
-      { name: "React Hooks Guide", url: "https://reactjs.org/docs/hooks-intro.html" }
-    ],
-    codeExample: `const AudioPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
+// const tasks = [
+//   {
+//     taskNumber: 1,
+//     title: "Basic Music Player UI",
+//     description: "Create a simple music player interface with play/pause controls, progress bar, and song information display.",
+//     icon: FaMobileAlt,
+//     difficulty: "beginner",
+//     time: "2-3 hours",
+//     technologies: ["React", "CSS", "HTML5 Audio"],
+//     requirements: [
+//       "Create play/pause button functionality",
+//       "Implement progress bar with seek capability",
+//       "Display current song title and artist",
+//       "Add volume control slider"
+//     ],
+//     resources: [
+//       { name: "HTML5 Audio API", url: "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement" },
+//       { name: "React Hooks Guide", url: "https://reactjs.org/docs/hooks-intro.html" }
+//     ],
+//     codeExample: `const AudioPlayer = () => {
+//   const [isPlaying, setIsPlaying] = useState(false);
+//   const [currentTime, setCurrentTime] = useState(0);
   
-  return (
-    <div className="player">
-      <button onClick={() => setIsPlaying(!isPlaying)}>
-        {isPlaying ? 'Pause' : 'Play'}
-      </button>
-    </div>
-  );
-};`
-  },
-  {
-    taskNumber: 2,
-    title: "Playlist Management",
-    description: "Implement playlist creation, editing, and management features with drag-and-drop reordering.",
-    icon: FaMobileAlt,
-    difficulty: "intermediate",
-    time: "4-6 hours",
-    technologies: ["React", "Local Storage", "Drag & Drop API"],
-    requirements: [
-      "Create playlist CRUD operations",
-      "Implement drag-and-drop song reordering",
-      "Add playlist sharing functionality",
-      "Save playlists to local storage"
-    ],
-    resources: [
-      { name: "React Beautiful DnD", url: "https://github.com/atlassian/react-beautiful-dnd" },
-      { name: "Local Storage API", url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" }
-    ]
-  }
-];
+//   return (
+//     <div className="player">
+//       <button onClick={() => setIsPlaying(!isPlaying)}>
+//         {isPlaying ? 'Pause' : 'Play'}
+//       </button>
+//     </div>
+//   );
+// };`
+//   },
+//   {
+//     taskNumber: 2,
+//     title: "Playlist Management",
+//     description: "Implement playlist creation, editing, and management features with drag-and-drop reordering.",
+//     icon: FaMobileAlt,
+//     difficulty: "intermediate",
+//     time: "4-6 hours",
+//     technologies: ["React", "Local Storage", "Drag & Drop API"],
+//     requirements: [
+//       "Create playlist CRUD operations",
+//       "Implement drag-and-drop song reordering",
+//       "Add playlist sharing functionality",
+//       "Save playlists to local storage"
+//     ],
+//     resources: [
+//       { name: "React Beautiful DnD", url: "https://github.com/atlassian/react-beautiful-dnd" },
+//       { name: "Local Storage API", url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" }
+//     ]
+//   }
+// ];
 
 const CodeSnippet = ({ code }) => (
   <pre className="bg-gray-900 border border-gray-700 rounded-lg p-3 sm:p-4 overflow-x-auto text-xs sm:text-sm">

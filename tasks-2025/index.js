@@ -10,7 +10,7 @@ const AppDevTasks = [
       difficulty: "beginner",
       time: "4-6 hours",
       technologies: [
-        "React Native", "Expo"
+        
       ],
       requirements: [
         "Load 5-7 songs from local assets",
@@ -30,7 +30,7 @@ const AppDevTasks = [
       difficulty: "intermediate",
       time: "6-8 hours",
       technologies: [
-        "React Native", "Expo"
+        
       ],
       requirements: [
         "Now Playing Screen with album poster, song and artist name",
@@ -49,7 +49,7 @@ const AppDevTasks = [
       difficulty: "advanced",
       time: "10-15 hours",
       technologies: [
-        "React Native", "SQLite", "Expo", "File System", "Background Tasks"
+        
       ],
       requirements: [
         "Database Integration (SQLite/Drift) for favorites, playlists, uploaded songs",
