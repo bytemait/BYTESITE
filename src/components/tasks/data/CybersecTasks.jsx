@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaShieldAlt, FaCheckCircle, FaChevronDown, FaChevronUp, FaExternalLinkAlt } from "react-icons/fa";
+import { FaShieldAlt, FaCheckCircle, FaChevronDown, FaChevronUp, FaExternalLinkAlt, FaFilePdf } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { CyberSecurityTasks as tasks } from "../../../../tasks-2025";
 import ParticleBG from "../ui/ParticleBG.jsx";
@@ -14,6 +14,7 @@ const TaskCard = ({
   challenge,
   flagFormat,
   imageUrl,
+  documentationUrl,
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [completed, setCompleted] = useState(false);
@@ -80,6 +81,28 @@ const TaskCard = ({
       {/* Description */}
       <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white font-light leading-relaxed">{description}</p>
 
+      {/* Documentation PDF Link */}
+      {documentationUrl && (
+        <div className="mt-4 sm:mt-6">
+          <div className="bg-blue-900 bg-opacity-30 rounded-xl p-3 sm:p-4 border border-blue-500/50">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <FaFilePdf className="text-red-400 text-lg sm:text-xl" />
+                <span className="text-blue-200 font-semibold text-sm sm:text-base">Task Documentation</span>
+              </div>
+              <a 
+                href={documentationUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors text-xs sm:text-sm"
+              >
+                View PDF <FaExternalLinkAlt className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Display image directly if it exists (for Task 2) */}
       {imageUrl && (
         <div className="mt-4 sm:mt-6">
@@ -139,7 +162,7 @@ const TaskCard = ({
           >
             {challenge && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Challenge</h4>
+                <h4 className="text-[#00ffae] font-bold mb-2 text-sm sm:text-base">Challenge</h4>
                 <div className="bg-gray-900 bg-opacity-80 text-[#00ffae] p-3 sm:p-4 rounded-xl font-mono border border-[#00ffaeaa] shadow-glow break-all text-xs sm:text-sm">
                   {challenge}
                 </div>
@@ -147,7 +170,7 @@ const TaskCard = ({
             )}
             {flagFormat && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-yellow-400 font-bold mb-2">Flag Format</h4>
+                <h4 className="text-yellow-400 font-bold mb-2 text-sm sm:text-base">Flag Format</h4>
                 <p className="text-yellow-300 font-mono bg-gray-800 p-2 sm:p-3 rounded text-xs sm:text-sm">{flagFormat}</p>
               </section>
             )}
@@ -188,6 +211,21 @@ const CybersecTasks = () => {
       >
         <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#00ffae] animate-pulse">
           Happy Hacking! 🛡️
+        </div>
+{/*         
+        <div className="bg-gray-900 bg-opacity-50 rounded-xl p-4 sm:p-6 max-w-xs sm:max-w-md mx-auto">
+          <h3 className="text-lg sm:text-xl font-bold text-[#00ffae] mb-2">Need Help?</h3>
+          <p className="text-gray-300 mb-2 text-sm sm:text-base">Contact for doubts:</p>
+          <p className="text-xs sm:text-sm">WhatsApp: <span className="text-cyan-400">9817413427</span></p>
+          <p className="text-xs sm:text-sm">Email: <span className="text-cyan-400 break-words">swayambansal@outlook.com</span></p>
+          <p className="text-xs text-gray-400 mt-2">Also available on LinkedIn & X</p>
+        </div> */}
+
+        <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-red-900 bg-opacity-30 rounded-xl border border-red-500 max-w-xs sm:max-w-lg mx-auto">
+          <h4 className="text-red-300 font-bold mb-2 text-sm sm:text-base">🚨 Submission Guidelines</h4>
+          <div className="text-xs sm:text-sm text-gray-300 space-y-2">
+            <p>• Provide the complete writeup of how you solved this challenge along with screenshots, add the extra files (if any) to a github repo and share that github link or a google drive folder.</p>
+          </div>
         </div>
 
         <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-green-900 bg-opacity-30 rounded-xl border border-green-500 max-w-xs sm:max-w-lg mx-auto">

@@ -313,7 +313,7 @@ const MechatronicsTasks = [
         "Make sure the bracket can be fixed onto a flat chassis plate by adding base holes"
       ],
       resources: [
-        { name: "NEMA 17 Reference", url: "https://reprap.org/wiki/NEMA_17_Stepper_motor" }
+        { name: "NEMA 17 Reference", url: "https://reprap.org/mediawiki/images/thumb/7/70/Step_motor_nema_17_stepper_motor.jpg/450px-Step_motor_nema_17_stepper_motor.jpg" }
       ],
       submission: [
         "The CAD model of the motor housing (in .step, .stl, or native format of your CAD software)",
@@ -365,7 +365,7 @@ const CreativeOutreachTasks = [
         "Storytelling Flow: Intro (introduction of BYTE + vision) → Highlights (achievements, events, impact) → Conclusion (future vision + call for branding/sponsorship)",
         "Editing Style: Clean, professional, and engaging with smooth transitions, animated text, and infographics"
       ],
-      deliverable: "A final MP4 video has to be submitted via the given Google Form",
+      deliverable: "A final mp4 video and its timeline have to be submitted via the given Google Form",
       evaluation: [
         "Storytelling & flow",
         "Creativity & editing quality",
@@ -465,13 +465,14 @@ const CyberSecurityTasks = [
       description: "Can you get the flag from this? Believe me it's easy",
       challenge: "TllCWHtueWJ4X3hhaXhzYV9qdHBsaXRoX3FleGRzaGg5OX0",
       flagFormat: "BYTE{}",
+      
     },
     {
       taskNumber: "2",
       icon: FaFlag,
       title: "Task 2",
       description: "This one is a little bit different, but one who knows can do it. The flag's in the image.",
-      flagFormat: "BYTE{}",
+      flagFormat: "flag{}",
       imageUrl: "https://drive.google.com/file/d/1ELLQDWkqsSL-PM_xQcids8axmntXUiOL/view?usp=sharing"
     }
 ];

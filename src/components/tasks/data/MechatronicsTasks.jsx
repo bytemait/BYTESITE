@@ -18,6 +18,9 @@ const TaskCard = ({
   submission,
   demo,
   hints,
+  bugsToAvoid,
+  resources,
+  extras,
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [completed, setCompleted] = useState(false);
@@ -26,6 +29,8 @@ const TaskCard = ({
     easy: "bg-green-600",
     intermediate: "bg-yellow-600",
     advanced: "bg-red-600",
+    beginner: "bg-blue-600",
+    creative: "bg-purple-600",
   };
 
   return (
@@ -45,7 +50,7 @@ const TaskCard = ({
               {title}
             </h3>
             <div className="flex flex-wrap gap-2 sm:gap-3 mt-1 text-xs sm:text-sm text-gray-300 font-mono items-center">
-              <span className={`px-2 sm:px-3 py-1 rounded-full text-white text-xs ${difficultyColors[difficulty] || difficultyColors.easy}`}>
+              <span className={`px-2 sm:px-3 py-1 rounded-full text-white text-xs ${difficultyColors[difficulty.toLowerCase()] || difficultyColors.easy}`}>
                 {difficulty}
               </span>
               {time && <span className="flex items-center gap-1">⏰ {time}</span>}
@@ -110,55 +115,91 @@ const TaskCard = ({
           >
             {requirements && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Requirements</h4>
-                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2">
-                  {requirements.map((item, i) => <li key={i}>{item}</li>)}
+                <h4 className="text-[#00ffae] font-bold mb-2 text-sm sm:text-base">
+                  Requirements
+                </h4>
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  {requirements.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </section>
             )}
             {steps && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-[#00ffae] font-bold mb-2">Steps</h4>
-                <ol className="list-decimal pl-4 sm:pl-5 space-y-1 sm:space-y-2">
+                <h4 className="text-[#00ffae] font-bold mb-2 text-sm sm:text-base">Steps</h4>
+                <ol className="list-decimal pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   {steps.map((item, i) => <li key={i}>{item}</li>)}
                 </ol>
               </section>
             )}
             {hints && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-yellow-400 font-bold mb-2">Hints</h4>
-                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2">
+                <h4 className="text-yellow-400 font-bold mb-2 text-sm sm:text-base">Hints</h4>
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   {hints.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
               </section>
             )}
             {outcomes && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-cyan-400 font-bold mb-2">Expected Learning Outcomes</h4>
-                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2">
+                <h4 className="text-cyan-400 font-bold mb-2 text-sm sm:text-base">Expected Learning Outcomes</h4>
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   {outcomes.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
               </section>
             )}
             {demo && (
               <section className="mb-4 sm:mb-5">
-                <h4 className="text-purple-400 font-bold mb-2">Demo Video</h4>
+                <h4 className="text-purple-400 font-bold mb-2 text-sm sm:text-base">Demo Video</h4>
                 <a 
                   href={demo} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="underline hover:text-[#08f8ff] transition-colors text-[#00ffae] break-words"
+                  className="underline hover:text-[#08f8ff] transition-colors text-[#00ffae] break-words text-xs sm:text-sm"
                 >
                   Watch Demo →
                 </a>
               </section>
             )}
+            {resources && (
+              <section className="mb-4 sm:mb-5">
+                <h4 className="text-blue-400 font-bold mb-2 text-sm sm:text-base">Resources</h4>
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  {resources.map(({ name, url }, idx) => (
+                    <li key={idx}>
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[#08f8ff] transition-colors break-words text-[#00ffae]"
+                      >
+                        {name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
             {submission && (
-              <section className="mb-2">
-                <h4 className="text-orange-400 font-bold mb-2">Submission</h4>
-                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2">
+              <section className="mb-4 sm:mb-5">
+                <h4 className="text-orange-400 font-bold mb-2 text-sm sm:text-base">Submission</h4>
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   {submission.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
+              </section>
+            )}
+            {bugsToAvoid && (
+              <section className="mb-4 sm:mb-5">
+                <h4 className="text-red-400 font-bold mb-2 text-sm sm:text-base">Bugs to Avoid</h4>
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  {bugsToAvoid.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </section>
+            )}
+            {extras && (
+              <section className="mb-2 text-xs sm:text-sm">
+                {extras}
               </section>
             )}
           </motion.div>

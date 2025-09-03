@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -88,7 +88,9 @@ function NavBar() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}
       >
-        BYTE
+        <Link to="/">
+          BYTE
+        </Link>
       </motion.div>
 
       {/* Desktop Menu - Now shows from lg (1024px) instead of md */}
