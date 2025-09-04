@@ -259,7 +259,12 @@ const WebDevTasks = () => {
 					<p>Kush Aheer</p>
 					<p className="text-xs sm:text-sm">
 						WhatsApp:{" "}
-						<span className="text-cyan-400">9654747272</span>
+						<span className="text-cyan-400">96547 47272</span>
+					</p>
+					<p>Arpan</p>
+					<p className="text-xs sm:text-sm">
+						WhatsApp:{" "}
+						<span className="text-cyan-400">93544 78287</span>
 					</p>
 					
 				</div>
