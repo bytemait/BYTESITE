@@ -210,6 +210,19 @@ const WebDevTasks = () => {
 					and private projects—professional, secure, and beautifully
 					structured.
 				</p>
+				<div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-900 bg-opacity-30 rounded-xl border border-blue-500 max-w-xs sm:max-w-2xl mx-auto space-y-3 sm:space-y-4">
+					<p className="text-blue-200 font-semibold text-sm sm:text-base">
+						📁 Documentation Files:{" "}
+						<a
+							className="text-blue-300 hover:text-blue-100 transition-colors break-words"
+							href="https://drive.google.com/drive/folders/1Xh9_WLpOVasrlJUohvSpv6vYu7uRVOzN"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Link
+						</a>
+					</p>
+				</div>
 			</motion.header>
 
 			<motion.ul
@@ -236,6 +249,20 @@ const WebDevTasks = () => {
 				className="mt-12 sm:mt-16 md:mt-20 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#00ffae] animate-pulse px-4"
 			>
 				Happy Coding! 🚀
+				<div className="bg-gray-900 bg-opacity-50 rounded-xl p-4 sm:p-6 max-w-xs sm:max-w-md mx-auto">
+					<h3 className="text-lg sm:text-xl font-bold text-[#00ffae] mb-2">
+						Need Help?
+					</h3>
+					<p className="text-gray-300 mb-2 text-sm sm:text-base">
+						Contact for doubts:
+					</p>
+					<p>Kush Aheer</p>
+					<p className="text-xs sm:text-sm">
+						WhatsApp:{" "}
+						<span className="text-cyan-400">9654747272</span>
+					</p>
+					
+				</div>
 			</motion.div>
 		</div>
 	);

@@ -234,6 +234,19 @@ const AppDevTasks = () => {
         <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto text-gray-300 leading-relaxed px-2">
           Create a progressive music player app—from basic UI to advanced features like database integration, song uploads, playlists, and synced lyrics highlighting.
         </p>
+        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-900 bg-opacity-30 rounded-xl border border-blue-500 max-w-xs sm:max-w-2xl mx-auto space-y-3 sm:space-y-4">
+					<p className="text-blue-200 font-semibold text-sm sm:text-base">
+						📁 Documentation Files:{" "}
+						<a
+							className="text-blue-300 hover:text-blue-100 transition-colors break-words"
+							href="https://drive.google.com/drive/folders/1Xh9_WLpOVasrlJUohvSpv6vYu7uRVOzN"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Link
+						</a>
+					</p>
+				</div>
       </motion.header>
 
       <motion.ul layout className="space-y-8 sm:space-y-12 lg:space-y-16 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto">

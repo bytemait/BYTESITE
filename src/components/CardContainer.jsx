@@ -31,22 +31,8 @@ const CardContainer = () => {
                 animation: "gradient-shift 3s ease-in-out infinite",
               }}
             >
-              Harvesting Insights from
+              BYTE 2025 TASKS
             </motion.h1>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16 bg-gradient-to-r from-[#00ffae] via-white to-[#00ffae] bg-clip-text text-transparent"
-              style={{
-                backgroundSize: "200% 100%",
-                animation: "gradient-shift 3s ease-in-out infinite 1.5s",
-              }}
-            >
-              Diligent Endeavours
-            </motion.h2>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8">
