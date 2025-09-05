@@ -136,6 +136,7 @@ const MLTasks = [
         "Python", "Scikit-learn", "Pandas", "Classification"
       ],
       datasetInfo: "The Dataset should be split 80/20 and all the major metrics should be evaluated on it.",
+      datasetLink : "https://drive.google.com/file/d/1ZcOhB923LeGZPseeomt-iYETqBJdN0iP/view?usp=sharing",
       steps: [
         "Load and preprocess the dataset",
         "Extract features from text.",
@@ -261,7 +262,9 @@ const MechatronicsTasks = [
       hints: [
         "The username is a random integer from 1–50.",
         "The password is a random integer from 51–100.",
-        "Is your https request failing? You might need to dig deeper into sending https requests with ESP32"
+        "A username and password combination will only be valid for 24 hours from the time of generation.",
+        "A username and password combination can only be used once.",
+        "Is your https request failing? You might need to dig deeper into sending https requests with ESP32."
       ],
       outcomes: [
         "Learn to connect ESP32 to the Internet via Wi-Fi.",

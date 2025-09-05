@@ -22,6 +22,7 @@ const TaskCard = ({
 	codeExample,
 	extras,
 	datasetInfo,
+	datasetLink,
 }) => {
 	const [expanded, setExpanded] = useState(false);
 	const [completed, setCompleted] = useState(false);
@@ -99,16 +100,18 @@ const TaskCard = ({
 					<p className="text-gray-300 text-sm sm:text-base">
 						{datasetInfo}
 					</p>
-					<a
-						href={
-							"https://drive.google.com/file/d/1ZcOhB923LeGZPseeomt-iYETqBJdN0iP/view?usp=sharing"
-						}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="underline hover:text-[#08f8ff] transition-colors break-words"
-					>
-						Link
-					</a>
+					{datasetLink && (
+						<a
+							href={
+								datasetLink
+							}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline hover:text-[#08f8ff] transition-colors break-words"
+						>
+							Link
+						</a>
+					)}
 				</div>
 			)}
 
