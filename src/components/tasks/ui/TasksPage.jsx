@@ -127,7 +127,7 @@ function TasksPage() {
 							⏰ DEADLINE:
 						</span>
 						<span className="text-lg sm:text-xl text-red-300">
-							September 10, 2025 • 11:59 PM
+							September 12, 2025 • 11:59 PM
 						</span>
 					</div>
 					<FaExclamationTriangle className="text-xl animate-pulse" />
