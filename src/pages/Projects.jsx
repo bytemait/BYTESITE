@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import gsap from 'gsap';
 import  ProjectCard  from "../components/Project_Card/ProjectCard";
 
@@ -49,7 +49,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(to_bottom,_#000000,_#000000,_#083b24,_#0e6542,_#0e6542,_#0e6542)]  ">
+    <div className="min-h-screen bg-[linear-gradient(to_bottom,_#000000_0%,_#021a11_15%,_#083b24_35%,_#0e6542_50%,_#083b24_65%,_#021a11_85%,_#000000_100%)]
+">
       <div className="flex flex-col justify-center items-center pt-16 md:pt-24 px-4 text-center ">
         <div className="flex flex-col justify-center md:flex-row items-center md:items-end gap-4 md:gap-6">
           <span className="main-title items-center text-center text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-extrabold tracking-widest bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
