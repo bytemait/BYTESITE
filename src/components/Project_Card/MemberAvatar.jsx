@@ -7,7 +7,7 @@ export default function MemberAvatars({ members = [] }) {
 
   if (!members.length) return null;
 
-  const visibleCount = 4; // number of avatars visible at once
+  const visibleCount = members.length < 4 ? members.length : 4; // number of avatars visible at once
   const total = members.length;
 
   const next = () => setIndex((prev) => (prev + 1) % total);
