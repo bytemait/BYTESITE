@@ -70,7 +70,7 @@ const projects = [
     title: "SereneHub",
     imageUrls: [image2],
     description: `SereneHub is a digital platform aimed at improving mental health awareness and support — Byte’s initiative towards tech for good, offering quiet emotional support for students and professionals.`,
-    members: ["subhashish-panda"],
+    members: ["Codingpanda252"],
     projectUrl: "https://github.com/bytemait"
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     title: "RoboSoccer",
     imageUrls: [image2],
     description: `RoboSoccer is a competitive robotics project where autonomous or remote-controlled robots play soccer — navigating, locating the ball, and scoring goals under set rules.`,
-    members: ["Codingpanda252", "chayan-mann", "05Ashish", "Shivoo29"],
+    members: ["Nalin-khanna", "chayan-mann", "05Ashish", "Shivoo29"],
     projectUrl: "https://github.com/bytemait"
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     title: "DensePose WiFi Research",
     imageUrls: [image2],
     description: `This research project extends DensePose — a computer vision system that creates 3D meshes of human poses — by applying heat mapping via WiFi signals to map through walls.`,
-    members: ["Shivoo29", "arnav-chopra", "05Ashish", "chayan-mann", "anushka-singh", "chayan-khetan", "Codingpanda252"],
+    members: ["Shivoo29", "arnav-chopra", "05Ashish", "chayan-mann", "anushka-singh", "chayan-khetan", "Nalin-khanna"],
     projectUrl: "https://github.com/bytemait"
   }
 ];
