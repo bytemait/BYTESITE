@@ -36,7 +36,7 @@ const ProjectCard = () => {
       {/* Right Side */}
       <div className='w-full lg:w-auto flex justify-center lg:justify-end'>
         {project.imageUrls.map((imageUrl, id) => (
-          <div key={id} className='max-w-[90%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-none'>
+          <div key={id} className='max-w-[90%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-xl'>
             <img
               src={imageUrl}
               alt={project.title}
