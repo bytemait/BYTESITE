@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "name": "Ashish Negi",
+    "role": "President",
+    "year": 2023,
+    "tags": ["Leadership"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/ashish_negi_b5hw4b.png",
+    "type": "member"
+  },
+  {
+    "id": 2,
+    "name": "Arnav Chopra",
+    "role": "President",
+    "year": 2023,
+    "tags": ["Leadership"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/arnav_chopra_tar8of.png",
+    "type": "member"
+  },
+  {
+    "id": 3,
+    "name": "Vipul Kohli",
+    "role": "Vice President",
+    "year": 2023,
+    "tags": ["Leadership"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/vipul_kohli_cj4rux.png",
+    "type": "member"
+  },
+  {
+    "id": 4,
+    "name": "Pratham Gupta",
+    "role": "Vice President",
+    "year": 2023,
+    "tags": ["Leadership"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299630/pratham_gupta_e5zjc8.png",
+    "type": "member"
+  },
+  {
+    "id": 5,
+    "name": "Sukaran Gulati",
+    "role": "Vice President",
+    "year": 2023,
+    "tags": ["Leadership"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/sukaran_gulati_kx8kta.png",
+    "type": "member"
+  },
+  {
+    "id": 6,
+    "name": "Divyansh Kalra",
+    "role": "GenSec",
+    "year": 2023,
+    "tags": ["Operations"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/divyansh_kalra_nh2d1t.png",
+    "type": "member"
+  },
+  {
+    "id": 7,
+    "name": "Anagh Miglani",
+    "role": "GenSec",
+    "year": 2023,
+    "tags": ["Operations"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/anagh_miglani_wujjwr.png",
+    "type": "member"
+  },
+  {
+    "id": 8,
+    "name": "Vansh",
+    "role": "Mechatronics Coord.",
+    "year": 2023,
+    "tags": ["Mechatronics"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/vansh_nfxtps.png",
+    "type": "member"
+  },
+  {
+    "id": 9,
+    "name": "Swayam Bansal",
+    "role": "Mechatronics Coord.",
+    "year": 2023,
+    "tags": ["Mechatronics"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/image_y5a8uk.png",
+    "type": "member"
+  },
+  {
+    "id": 10,
+    "name": "Shrey Garg",
+    "role": "Creative Coord.",
+    "year": 2023,
+    "tags": ["Creative"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299629/shrey_garg_qbjlch.png",
+    "type": "member"
+  },
+  {
+    "id": 11,
+    "name": "Janhvi Pareek",
+    "role": "Creative Coord.",
+    "year": 2023,
+    "tags": ["Creative"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/janhvi_pareek_a3byof.png",
+    "type": "member"
+  },
+  {
+    "id": 12,
+    "name": "Dishant Pandey",
+    "role": "Outreach Coord.",
+    "year": 2023,
+    "tags": ["Creative"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/dishant_pandey_nrwxaw.png",
+    "type": "member"
+  },
+  {
+    "id": 13,
+    "name": "Krish Malik",
+    "role": "Dev Coord.",
+    "year": 2023,
+    "tags": ["Development"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/krish_malik_v1i4nl.png",
+    "type": "member"
+  },
+  {
+    "id": 14,
+    "name": "Manan Wadhwa",
+    "role": "Dev Coord.",
+    "year": 2023,
+    "tags": ["Development"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/manan_wadhwa_kgidsn.png",
+    "type": "member"
+  },
+  {
+    "id": 15,
+    "name": "Arpan Taneja",
+    "role": "Dev Coord.",
+    "year": 2023,
+    "tags": ["Development"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299632/arpan_taneja_sbqsmy.png",
+    "type": "member"
+  },
+  {
+    "id": 16,
+    "name": "Kush Aheer",
+    "role": "Dev Coord.",
+    "year": 2023,
+    "tags": ["Development"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/kush_aheer_j40v6w.png",
+    "type": "member"
+  },
+  {
+    "id": 16,
+    "name": "Alumni Card",
+    "role": "Dev Coord.",
+    "year": 2023,
+    "tags": ["Development"],
+    "avatar": "https://res.cloudinary.com/dc1wyerpt/image/upload/v1756299631/kush_aheer_j40v6w.png",
+    "type": "alumni"
+  }
+]
