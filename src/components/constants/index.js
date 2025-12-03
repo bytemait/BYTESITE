@@ -208,34 +208,28 @@ const technologies = [
 
 
 const experiences = [
+{
+  title:" 1st Position- Blockathon(IIT Roorkee) ",
+  winner_name: "Divyansh,Tanush,Vipul,Piyush",
+
+  points: [
+    "36-hour Web3 hackathon for innovators to build, compete, and win prizes."
+  ],
+},
   {
-    title: "1st Place - Women Innovathon 2024",
-    winner_name: "Khushi Minda, Anisha Dua, Vidushi V., Sneha Sharma",
-    date: "October 2024",
+    title: "2nd Position-Bit by Bit(IIT Roorkee)",
+    winner_name: "Pratham,Arpan,Joyal",
+  
     points: [
-      "After 6000+ registrations, our team was selected among the top 5 teams.",
-      "Team Swasthya PRE(AR)NA secured 1st place with their groundbreaking healthcare prototype.",
-      "The achievement followed 3 months of mentorship and intense competition."
+      " Intense coding marathon building real-world apps with teamwork and innovation"
     ],
   },
   {
-    title: "1st Runner-up - IIIT Nagpur Designathon 2024",
-    winner_name: "Tanush Purwar, Vipul Kohli, Pratyaksh Agarwal",
-    date: "October 2024",
+    title: "3rd Position-ScytheCTF(IIT Roorkee)",
+    winner_name: "Arnav,Ashish,Shivam Kr.Jha,Piyush Bansal",
+   
     points: [
-      "Out of 45+ teams, our team was shortlisted among the 11 for the offline round.",
-      "We tackled tough challenges like no buttons, interactive backgrounds, and three clickable events.",
-      "Secured 1st Runner-up at the national-level IIIT Nagpur Designathon!"
-    ],
-  },
-  {
-    title: "Innovative Track - Hack7day GTBIT - 1st Position",
-    winner_name: "Krish Malik, Dev Garg",
-    date: "October 2024",
-    points: [
-      "The team faced daily online rounds and a 12-hour intense offline hackathon.",
-      "Their exceptional teamwork and innovation in the AI/ML domain earned them this remarkable achievement.",
-      "This victory was secured in the Web 2 track, with a special focus on AI/ML."
+      "A cybersecurity battleground,alternating between attack and defense. Strict rules ensure fairness."
     ],
   },
   {
@@ -258,36 +252,12 @@ const experiences = [
       "Competing against top talent from across the country, our innovative solution stood out, earning us the top spot and recognition on a national level."
     ],
   },
-  {
-    title: "HackXtreme (IIT Delhi) - 1st Position",
-    winner_name: "Chanmeet , Ishaan , Aman",
-    
-    date: "September 2023",
-    points: [
-    ],
-  },
-  {
+   {
     title: "Build for Future (DTU) - Winners",
     winner_name: "Ishaan , Chanmeet, Abir, Subhashish",
     date: "MAY 2024",
     points: [
       "We emerged as the Winners of the Build for Future hackathon at Delhi Technological University (DTU), where we demonstrated our cutting-edge solution in a highly competitive environment.",
-    ],
-  },
-  {
-    title: "Innovation Mela",
-    winner_name: "BYTE",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "We proudly clinched the top spot at our own Innovation Mela hosted by Maharaja Agrasen Institute of Technology (MAIT).",
-    ],
-  },
-  {
-    title: "UX Unleashed - 3rd Position",
-    winner_name: "",
-    date: "MAY 2024",
-    points: [
-      "We secured the 3rd Position at UX Unleashed, a competitive UI/UX event held during Moksha Fest at NSUT.",
     ],
   },
   {
@@ -298,22 +268,77 @@ const experiences = [
       ,
     ],
   },
+{
+title:"UX Unleashed(NSUT)",
+winner_name:"Ansh Kapila",
+points:[
+  " Figma Finesse lets you showcase UI/UX skills through creative, design-focused problem-solving challenges."
+],
+},
+{
+title:"1st Position (Innovative Track)- Hack7day (GTBIT)",
+winner_name:" Krish Malik, Dev Garg",
+points:[
+" Hack 7 Days: Tezos India’s week long blockchain hackathon empowering student developers nationwide."
+],
+},
+{
+title:" 1st Position- Women Innovathon (2024)",
+winner_name:" Khushi Minda, Anisha Dua, Vidushi Verma, Sneha Sharma",
+points:[
+"NetApp's Women Innovathon invites students to share datadriven ideas for innovation and impact."
+],
+},
+{
+  title:" 2nd postion-IIT Nagpur",
+  winner_name:" Tanush Purwar, Vipul Kohli,Pratyaksh Agarwal",
+  points:[ "Designathon is a UI/UX competition where users create unique designs with creative twists."
+
+  ],
+},
+
+
   {
-    title: "HackMait-4.0 - 1st Positon",
-    winner_name: "Abir, Subhashish",
-    date: "MAY 2023",
-    points: [
-      ,
+    title: "2nd Position- Dotslash (Plaksha University, Mohali)",
+    winner_name: " Arpan Taneja, Krish Malik and Kaustubh",
+    
+ 
+    points: [" Dotslash is an annual event hosted at Plaksha University that serves as a platform for students to come together,learn, and create innovative technology based solutions. "
     ],
   },
   {
-    title: "CodeforCause - MSIT -1ST POSITION",
-    winner_name: "Subhashish, Abir",
-    date: "MAY 2023",
+    title: " 1st Position-Supabase LW13",
+    winner_name: " Swayam Bansal",
+    
     points: [
-      ,
+      " Launch Week 13 Hackathon sparked creativity, showcasing incredible new Supabase features from developers",
     ],
   },
+  {
+    title: " 1st Position-Energy Hackathon(IIT Delhi)",
+    winner_name: " Aditya channa,Jastej singh,Madhav kapoor ,Avni goel,Yashaswi goel",
+  
+    points: [
+      " Innovative ideas to address challenges in smart metering and power system modernization.",
+    ],
+  },
+  {
+    title: " 1st Position- WIEgnite 2.0 (IGDTUW)",
+    winner_name: " Swayam Bansal",
+    
+    points: [
+      " IEEE IGDTUW’s flagship hackathon driving innovation across five impactful tracks",
+    ],
+  },
+  {
+    title: " 3rd postion- Edu chain regionals (MSIT)",
+    winner_name: " Manan Wadhwa, Anagh Miglani,Tanush Purwar",
+  
+    points: [
+      " Blockchain-powered platform enabling AI learning, tokenized achievements, and education finance."
+    ],
+  },
+  
 ];
 
 
